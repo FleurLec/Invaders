@@ -1,0 +1,38 @@
+---
+title: "Paris invasion"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r pressure, echo=FALSE, message=FALSE, warning=FALSE}
+library(leaflet)
+library(htmltools)
+library(dplyr)
+library(xml2)
+library(rvest)
+
+##### BUILD INVADERS LOGO ###########################################################
+
+file.logo <- "invaders-green-logo.png"
+invader.icon <- makeIcon(iconUrl = file.logo,   iconWidth = 20, iconHeight = 20)
+
+
+
+invader.map <- read.csv2( file = "invaders.geo.clean.csv", stringsAsFactors = F)
+
+invader.map <- invader.map %>% filter(lon>48.5) %>% filter(lon<49) %>% filter(lat >2.12) %>% filter(lat <2.49)
+
+options(digits=9)
+invader.map$lon <- as.numeric(invader.map$lon)
+invader.map$lat <- as.numeric(invader.map$lat)
+
+m <- leaflet(data = invader.map) 
+#m <- m  %>% addProviderTiles("Esri.WorldImagery")
+m <- m %>% addTiles() 
+m <- m %>% addMarkers(~lat, ~lon, icon = invader.icon, popup = ~htmlEscape(paste(invader, address, invaders.geo, lat, lon)))
+m
+```
