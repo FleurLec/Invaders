@@ -12,5 +12,6 @@ Last part to draw the journey is done manually using [https://umap.openstreetmap
 2nd Trail : [Paris-Buttes-Chaumont]  
 3rd Trail : [Paris-Saint-Germain-Odéon](https://umap.openstreetmap.fr/fr/map/rando-invaders-003_231138#15/48.8557/2.3375)  
 4th Trail : [Paris-Europe]   
-5th Trail : [Paris-Charonne](https://umap.openstreetmap.fr/fr/map/rando-invader-005_231133#15/48.8583/2.4046)  
+5th Trail : [Paris-Charonne](https://umap.openstreetmap.fr/fr/map/rando-invader-005_231133#15/48.8583/2.4046)   
+6th Trail : [Paris-Italie](https://umap.openstreetmap.fr/fr/map/rando_invaders_6_251826)  
 
