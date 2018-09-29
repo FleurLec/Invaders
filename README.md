@@ -1,9 +1,15 @@
 # Invaders
 ### Geolocation and Invaders Journey 
 
+![invadermap](./img/invaders.png)  
+
 Using a list of invaded address in Paris, geolocate them on a map, and draw dedicated Invaders trail per district.
 
-Last part to draw the journey is done manually using [https://umap.openstreetmap.fr/](https://umap.openstreetmap.fr/)  
+Last part to draw the journey is done manually using (for the moment...) [https://umap.openstreetmap.fr/](https://umap.openstreetmap.fr/)    
+
+
+Use the following links to enjoy a trail where you'll sure to meet many invaders, with the pleasure of finding them (far more funny than checking addresses)  
+
 
 ---
 
