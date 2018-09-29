@@ -1,3 +1,10 @@
+install.packages("leaflet")
+install.packages("htmltools")
+install.packages("dplyr")
+install.packages("xml2")
+install.packages("rvest")
+install.packages("knitr")
+
 library(leaflet)
 library(htmltools)
 library(dplyr)
@@ -112,6 +119,7 @@ invader.final$lat <- as.numeric(invader.final$lat)
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
 
+save(invader.final, file="invader_final.Rdata")
 ## DRAW LOCATION ON A MAP
 
 leaflet(data = invader.final, width = "100%") %>%
