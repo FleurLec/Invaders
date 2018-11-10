@@ -22,43 +22,6 @@ invader.icon <- iconList(
 )
 
 
-## SCRAP INVADERS ADRESS LIST #######################################################
-
-
-url <- "http://wiki.battle.paris/index.php?title=Space_Oddity"
-url.sparse <- xml2::read_html(url)
-
-url.list <- rvest::html_text(rvest::html_nodes(x= url.sparse, xpath='//*[@class="new"]'))
-
-# get invaders name and invader address
-invaders.df <- data.frame(invader = substr(url.list, 1, regexpr(",", url.list)[1]-1),
-                          address = substr(url.list, regexpr(",", url.list)[1]+1, nchar(url.list)))
-
-
-# save list in a csv
-write.csv(invaders.df, file = "./data/invaders.csv")
-
-
-
-## GEOCODE PLACES  ##################################################################
-
-# read adres file
-invaders.df <- read.csv2(file = "./data/invaders.clean.csv")
-
-# source geocoding code
-source("source_geocode.R")
-
-
-# apply geocoding to each line
-invaders.geo <- apply( as.data.frame(invaders.df$address),1,  gGeoCodeBing)
-
-# cat to previous file
-invader.final <- cbind(invaders.df, invaders.geo)
-
-# save
-write.csv2(invader.final, file = "./data/invaders.geo.csv")
-
-
 
 ## DRAW ON A MAP #####################################################################
 
@@ -68,6 +31,7 @@ write.csv2(invader.final, file = "./data/invaders.geo.csv")
 
 # read cleaned file
 invader.all <- read.csv2( file = "./data/invaders.geo.clean.csv", stringsAsFactors = F)
+
 
 # tag status
 invader.all <- invader.all %>% 
@@ -95,26 +59,25 @@ invader.final <- invader.all2 %>%
   mutate(status = ifelse(!is.na(status2), status2, status)) %>%
   select(-c(status2, dtmaj))
 
+table(invader.final$status)
 
 # flashed but not on the initial list
-invader.add <-  anti_join(invader.flash, invader.all, by="code") %>% 
-  mutate(status = status2) %>%
-  select(-status2)
+#invader.add <-  anti_join(invader.flash, invader.all, by="code") %>% 
+#  mutate(status = status2) %>%
+#  select(-status2)
 
-write.csv2(invader.add, file = "./data/invader.add.csv")
+#write.csv2(invader.add, file = "./data/invader.add.csv")
 # find address back
 
 invader.add <- read.csv2("./data/invader.add.clean.csv")
-
-
-
 invader.final <- invader.final %>% select(c(code, status, address, lat, lon)) %>% rbind(invader.add)
 
-
+#which(is.na(invader.final$lon))
 # clean format for lat/long
 options(digits=9)
 invader.final$lon <- as.numeric(invader.final$lon)
 invader.final$lat <- as.numeric(invader.final$lat)
+
 
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
