@@ -1,9 +1,3 @@
-install.packages("leaflet")
-install.packages("htmltools")
-install.packages("dplyr")
-install.packages("xml2")
-install.packages("rvest")
-install.packages("knitr")
 
 library(leaflet)
 library(htmltools)
@@ -11,6 +5,7 @@ library(dplyr)
 library(xml2)
 library(rvest)
 library(knitr)
+library(rmarkdown)
 
 ##### BUILD INVADERS LOGO ###########################################################
 
@@ -33,9 +28,9 @@ invader.icon <- iconList(
 invader.all <- read.csv2( file = "./data/invaders.geo.clean.csv", stringsAsFactors = F)
 
 
-# tag status
+# tag status (not perfect, but as invaders are from many city PA, NY, LY..., easier that way)
 invader.all <- invader.all %>% 
-  mutate( status = ifelse(artist == "PA", "Not.yet", "Not.invader")) 
+  mutate( status = ifelse(artist == "VRS", "Not.invader", "Not.yet")) 
 
 
 # read alreadly flashed invaders
@@ -47,7 +42,6 @@ invader.all2 <- invader.all %>%
   left_join(invader.flash, by="code") %>% 
   mutate(status = ifelse(!is.na(status2), status2, status)) %>%
   select(-c(status2, dtmaj))
-
 
 # desactivated
 invader.des <- read.csv2( file = "./data/desactivated.csv", stringsAsFactors = F)
@@ -72,17 +66,23 @@ table(invader.final$status)
 invader.add <- read.csv2("./data/invader.add.clean.csv")
 invader.final <- invader.final %>% select(c(code, status, address, lat, lon)) %>% rbind(invader.add)
 
-#which(is.na(invader.final$lon))
+# which(is.na(invader.final$lat))
+# invader.final[20,];
+
+
 # clean format for lat/long
 options(digits=9)
 invader.final$lon <- as.numeric(invader.final$lon)
 invader.final$lat <- as.numeric(invader.final$lat)
 
-
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
 
-save(invader.final, file="invader_final.Rdata")
+
+save(invader.final, file="data/invader_final.Rdata")
+
+
+
 ## DRAW LOCATION ON A MAP
 
 leaflet(data = invader.final, width = "100%") %>%
@@ -90,8 +90,29 @@ leaflet(data = invader.final, width = "100%") %>%
   setView(lng = lon.med, lat = lat.med, zoom = 12) %>%
   addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, address)))
 
+
+## RENDER MARKDOWN #####################################################################
+
+output_dir <- "./output"
+render("./code/invaders.Rmd", output_dir = output_dir, params = list(output_dir = output_dir))
+
+
+
 ## Table to count
 
 count.invaders <- invader.final %>% group_by(status) %>% summarize(n = n())
 kable(count.invaders)
 
+
+## check which invaders are missing from geoclean
+head(invader.final)
+
+all <- data.frame(code = (1:1388)) 
+all$code <- paste0("PA_", sprintf("%04d",all$code))
+missing <- all %>% anti_join(invader.final, by = "code")
+missing$code <- stringr::str_trim(missing$code)
+write.csv(missing, file = "data/invader.to.add.csv", row.names=F, quote = F)
+
+nrow(missing)
+
+save(missing, file = "data/missing.Rdata")
