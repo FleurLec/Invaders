@@ -1,11 +1,15 @@
 
 library(leaflet)
 library(htmltools)
+library(mapview)
 library(dplyr)
 library(xml2)
 library(rvest)
 library(knitr)
 library(rmarkdown)
+
+
+options(stringsAsFactors=FALSE)
 
 ##### BUILD INVADERS LOGO ###########################################################
 
@@ -78,19 +82,44 @@ invader.final$lat <- as.numeric(invader.final$lat)
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
 
+## Add pic
+
+invader.final %>% mutate(pic = paste0("./pic/", stringr::str_trim(code), ".png"))  -> invader.final
+invader.final %>% mutate_if(is.factor, as.character) -> invader.final
 
 save(invader.final, file="data/invader_final.Rdata")
 
-
+head(invader.final$pic)
 
 ## DRAW LOCATION ON A MAP
 
-leaflet(data = invader.final, width = "100%") %>%
+test <- invader.final[(1:100),]
+
+#~htmlEscape(paste(code, address)) 
+#popup = ~popupImage(pic, width=100, height=100),
+
+
+a = paste(sep = "<br/>",
+      "<img src='https://www.dropbox.com/home/invaders/PA_0001.png'>",
+      "<b>PA_0040</b>",
+      "606 5th Ave. S",
+      "Seattle, WA 98138")
+
+leaflet(data = test, width = "100%") %>%
   addTiles() %>%
-  setView(lng = lon.med, lat = lat.med, zoom = 12) %>%
-  addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, address)))
+  setView(lat = lat.med, lng = lon.med, zoom = 12) %>%
+  addMarkers( ~lon, ~lat, 
+              icon = ~invader.icon[status],
+              popup = a) 
+
+leaflet(data = df40, width = "100%") %>%
+  addTiles() %>%
+  setView(lat = 48.85, lng = 2.34, zoom = 12) %>%
+  addMarkers( ~lon, ~lat, 
+              popup = ~popupImage(pic, width=70, height=70) )
 
 
+?addmarkers
 ## RENDER MARKDOWN #####################################################################
 
 output_dir <- "./output"
