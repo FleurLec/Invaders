@@ -31,10 +31,11 @@ invader.icon <- iconList(
 # read cleaned file
 invader.all <- read.csv2( file = "./data/invaders.geo.clean.csv", stringsAsFactors = F)
 
+table(invader.all$artist)
 
 # tag status (not perfect, but as invaders are from many city PA, NY, LY..., easier that way)
 invader.all <- invader.all %>% 
-  mutate( status = ifelse(artist == "VRS", "Not.invader", "Not.yet")) 
+  mutate( status = ifelse(artist == "XX", "Not.invader", "Not.yet")) 
 
 
 # read alreadly flashed invaders
@@ -99,27 +100,27 @@ test <- invader.final[(1:100),]
 #popup = ~popupImage(pic, width=100, height=100),
 
 
-a = paste(sep = "<br/>",
-      "<img src='https://www.dropbox.com/home/invaders/PA_0001.png'>",
-      "<b>PA_0040</b>",
-      "606 5th Ave. S",
-      "Seattle, WA 98138")
+#a = paste(sep = "<br/>",
+#      "<img src='https://www.dropbox.com/home/invaders/PA_0001.png'>",
+#      "<b>PA_0040</b>",
+#      "606 5th Ave. S",
+#      "Seattle, WA 98138")
 
-leaflet(data = test, width = "100%") %>%
+leaflet(data = invader.final, width = "100%") %>%
   addTiles() %>%
   setView(lat = lat.med, lng = lon.med, zoom = 12) %>%
   addMarkers( ~lon, ~lat, 
               icon = ~invader.icon[status],
-              popup = a) 
+              popup = ~htmlEscape(paste(code, address)) ) 
 
-leaflet(data = df40, width = "100%") %>%
-  addTiles() %>%
-  setView(lat = 48.85, lng = 2.34, zoom = 12) %>%
-  addMarkers( ~lon, ~lat, 
-              popup = ~popupImage(pic, width=70, height=70) )
+#leaflet(data = df40, width = "100%") %>%
+#  addTiles() %>%
+# setView(lat = 48.85, lng = 2.34, zoom = 12) %>%
+# addMarkers( ~lon, ~lat, 
+#             popup = ~popupImage(pic, width=70, height=70) )
 
 
-?addmarkers
+
 ## RENDER MARKDOWN #####################################################################
 
 output_dir <- "./output"

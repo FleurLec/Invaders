@@ -38,12 +38,13 @@ invader.final$lat <- as.numeric(invader.final$lat)
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
 
-
+#lat.med <-  48.800460 
+#lon.med <- 2.136214
 ## DRAW LOCATION ON A MAP
 
 leaflet(data = invader.final, width = "100%") %>%
   addTiles() %>%
-  setView(lng = lon.med, lat = lat.med, zoom = 12) %>%
+  setView(lng = lon.med, lat = lat.med, zoom = 13) %>%
   addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, address))) %>%
   addFullscreenControl()
 ```
