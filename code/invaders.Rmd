@@ -1,7 +1,7 @@
 ---
 title: "Invaders map"
 output: html_document
-date: "`r Sys.Date()`"
+date: "Octobre 2019"
 params: 
   output_dir: "../output"
 ---
@@ -38,8 +38,8 @@ invader.final$lat <- as.numeric(invader.final$lat)
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
 
-#lat.med <-  48.800460 
-#lon.med <- 2.136214
+#lat.med <-  48.867114 
+#lon.med <- 2.358201
 ## DRAW LOCATION ON A MAP
 
 leaflet(data = invader.final, width = "100%") %>%

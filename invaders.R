@@ -1,4 +1,5 @@
 
+
 library(leaflet)
 library(htmltools)
 library(mapview)
@@ -129,6 +130,7 @@ render("./code/invaders.Rmd", output_dir = output_dir, params = list(output_dir 
 
 
 ## Table to count
+load(file="data/invader_final.Rdata")
 
 count.invaders <- invader.final %>% group_by(status) %>% summarize(n = n())
 kable(count.invaders)
@@ -137,11 +139,12 @@ kable(count.invaders)
 ## check which invaders are missing from geoclean
 head(invader.final)
 
-all <- data.frame(code = (1:1388)) 
+all <- data.frame(code = (1:1428)) 
 all$code <- paste0("PA_", sprintf("%04d",all$code))
 missing <- all %>% anti_join(invader.final, by = "code")
 missing$code <- stringr::str_trim(missing$code)
-write.csv(missing, file = "data/invader.to.add.csv", row.names=F, quote = F)
+missing$final <- paste0("Space Invader ", missing$code, ";" , missing$code, "; PA; ")
+write.csv(missing$final , file = "data/invader.to.add.csv", row.names=F, quote = F)
 
 nrow(missing)
 
