@@ -16,7 +16,12 @@ library(XML)
     download.file(url = paste0(url2, "PA_", stringr::str_pad(i, 4, pad = "0"), "-grosplan.png"), paste0("./pic/", paste0("PA_", stringr::str_pad(i, 4, pad = "0"), ".png")))
   }  
   
-
+  for (i in 1389:1449 )    
+  {
+    download.file(url = paste0(url2, "PA_", stringr::str_pad(i, 4, pad = "0"), "-grosplan.png"), paste0("./pic/", paste0("PA_", stringr::str_pad(i, 4, pad = "0"), ".png")))
+  }  
+  
+  
   ## Other option
   
   url <- "http://www.unoeilquitraine.fr/wp-content/gallery/2016-09-invader-ete/"

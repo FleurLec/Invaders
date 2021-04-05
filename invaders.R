@@ -139,7 +139,7 @@ kable(count.invaders)
 ## check which invaders are missing from geoclean
 head(invader.final)
 
-all <- data.frame(code = (1:1428)) 
+all <- data.frame(code = (1:1446)) 
 all$code <- paste0("PA_", sprintf("%04d",all$code))
 missing <- all %>% anti_join(invader.final, by = "code")
 missing$code <- stringr::str_trim(missing$code)
@@ -149,3 +149,4 @@ write.csv(missing$final , file = "data/invader.to.add.csv", row.names=F, quote =
 nrow(missing)
 
 save(missing, file = "data/missing.Rdata")
+
