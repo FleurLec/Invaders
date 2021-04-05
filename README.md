@@ -1,17 +1,24 @@
 # Invaders
-### Geolocation and Invaders Journey 
-
-![invadermap](./img/invaders.png)  
+### Geolocation and Invaders trip 
 
 Using a list of invaded address in Paris, geolocate them on a map, and draw dedicated Invaders trail per district.
 
-Last part to draw the journey is done manually using (for the moment...) [https://umap.openstreetmap.fr/](https://umap.openstreetmap.fr/)    
+![invadermap](./img/invaders.png)  
 
 
-Use the following links to enjoy a trail where you'll sure to meet many invaders, with the pleasure of finding them (far more funny than checking addresses)  
 
+**[NEW]** You can now use Trip.R to get an automated trip based on the input address and # of invaders you wan't to get. 
+
+
+![invadertrip](./img/invaders-trip.png)   
+
+Things to be added : 
+- possibility to include or not invaders already flashed
+- implement the traveller salesman algorithm to optimize route
+- embed the code in shiny.io
 
 ---
+Previous manual trips based on [https://umap.openstreetmap.fr/](https://umap.openstreetmap.fr/)    
 
 
 1st Trail : [Paris-Nation-to-Austerlitz]   
