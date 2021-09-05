@@ -1,4 +1,10 @@
-
+#########################################################
+# Draw a map of Invaders in Paris
+#########################################################
+# INPUT : - 4 pictos in /img/
+#         - data/invaders.geo.clean.csv
+#         - data/flash_invaders.csv
+#         - data/desactivated.csv
 
 library(leaflet)
 library(htmltools)
@@ -30,8 +36,9 @@ invader.icon <- iconList(
 ## should be made directly in R using regex. to be finetuned....
 
 # read cleaned file
-invader.all <- read.csv2( file = "./data/invaders.geo.clean.csv", stringsAsFactors = F)
+invader.all <- read.csv( file = "./data/invaders.geocoded.csv", stringsAsFactors = F)
 
+invader.all <- invader.all %>% mutate(artist = substr(code, 1, 2))
 table(invader.all$artist)
 
 # tag status (not perfect, but as invaders are from many city PA, NY, LY..., easier that way)
@@ -40,7 +47,7 @@ invader.all <- invader.all %>%
 
 
 # read alreadly flashed invaders
-invader.flash <- read.csv2( file = "./data/flash_invaders.csv", stringsAsFactors = F)
+invader.flash <- read.csv( file = "./data/flash_invaders.csv", stringsAsFactors = F)
 invader.flash$status2="Got.it"
 
 # merge already flashed and to be flashed
@@ -50,7 +57,7 @@ invader.all2 <- invader.all %>%
   select(-c(status2, dtmaj))
 
 # desactivated
-invader.des <- read.csv2( file = "./data/desactivated.csv", stringsAsFactors = F)
+invader.des <- read.csv( file = "./data/desactivated.csv", stringsAsFactors = F)
 invader.des$status2="Desactivated"
 
 # merge desactivated
@@ -66,20 +73,13 @@ table(invader.final$status)
 #  mutate(status = status2) %>%
 #  select(-status2)
 
-#write.csv2(invader.add, file = "./data/invader.add.csv")
-# find address back
-
-invader.add <- read.csv2("./data/invader.add.clean.csv")
-invader.final <- invader.final %>% select(c(code, status, address, lat, lon)) %>% rbind(invader.add)
-
-# which(is.na(invader.final$lat))
-# invader.final[20,];
-
 
 # clean format for lat/long
 options(digits=9)
 invader.final$lon <- as.numeric(invader.final$lon)
 invader.final$lat <- as.numeric(invader.final$lat)
+
+invader.final %>% filter(is.na(lon))
 
 lon.med <- as.numeric(quantile(invader.final$lon, .5))
 lat.med <- as.numeric(quantile(invader.final$lat, .5))
@@ -89,17 +89,11 @@ lat.med <- as.numeric(quantile(invader.final$lat, .5))
 invader.final %>% mutate(pic = paste0("./pic/", stringr::str_trim(code), ".png"))  -> invader.final
 invader.final %>% mutate_if(is.factor, as.character) -> invader.final
 
-save(invader.final, file="data/invader_final.Rdata")
+save(invader.final, file="data/OUT_invader_final.Rdata")
 
 head(invader.final$pic)
 
 ## DRAW LOCATION ON A MAP
-
-test <- invader.final[(1:100),]
-
-#~htmlEscape(paste(code, address)) 
-#popup = ~popupImage(pic, width=100, height=100),
-
 
 #a = paste(sep = "<br/>",
 #      "<img src='https://www.dropbox.com/home/invaders/PA_0001.png'>",
@@ -112,25 +106,13 @@ leaflet(data = invader.final, width = "100%") %>%
   setView(lat = lat.med, lng = lon.med, zoom = 12) %>%
   addMarkers( ~lon, ~lat, 
               icon = ~invader.icon[status],
-              popup = ~htmlEscape(paste(code, address)) ) 
+              popup = ~htmlEscape(paste(code, invaders.geo)) ) 
 
 #leaflet(data = df40, width = "100%") %>%
 #  addTiles() %>%
 # setView(lat = 48.85, lng = 2.34, zoom = 12) %>%
 # addMarkers( ~lon, ~lat, 
 #             popup = ~popupImage(pic, width=70, height=70) )
-
-
-
-## RENDER MARKDOWN #####################################################################
-
-output_dir <- "./output"
-render("./code/invaders.Rmd", output_dir = output_dir, params = list(output_dir = output_dir))
-
-
-
-## Table to count
-load(file="data/invader_final.Rdata")
 
 count.invaders <- invader.final %>% group_by(status) %>% summarize(n = n())
 kable(count.invaders)
@@ -144,9 +126,6 @@ all$code <- paste0("PA_", sprintf("%04d",all$code))
 missing <- all %>% anti_join(invader.final, by = "code")
 missing$code <- stringr::str_trim(missing$code)
 missing$final <- paste0("Space Invader ", missing$code, ";" , missing$code, "; PA; ")
-write.csv(missing$final , file = "data/invader.to.add.csv", row.names=F, quote = F)
+write.csv(missing$final , file = "./data/OUT_invader.to.add.csv", row.names=F, quote = F)
 
-nrow(missing)
-
-save(missing, file = "data/missing.Rdata")
 

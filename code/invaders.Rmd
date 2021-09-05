@@ -20,7 +20,7 @@ library(rvest)
 library(knitr)
 library(leaflet.extras)
 
-load("../data/invader_final.Rdata")
+load("../data/OUT_invader_final.Rdata")
 
 invader.icon <- iconList(
   Got.it = makeIcon(iconUrl = "../img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
@@ -45,6 +45,6 @@ lat.med <- as.numeric(quantile(invader.final$lat, .5))
 leaflet(data = invader.final, width = "100%") %>%
   addTiles() %>%
   setView(lng = lon.med, lat = lat.med, zoom = 13) %>%
-  addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, address))) %>%
+  addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, invaders.geo))) %>%
   addFullscreenControl()
 ```
