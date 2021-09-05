@@ -582,7 +582,7 @@ Space Invader PA_0682;PA_0682; PA; 21 rue des Francs-Bourgeois, Paris;21 Rue des
 Space Invader PA_0683;PA_0683; PA; 132 boulevard Richard Lenoir; 132 boulevard Richard Lenoir;48.8658316530; 2.3700052499
 Space Invader PA_0684;PA_0684; PA; 23bis rue Poliveau, Paris;23BIS Rue Poliveau, 75005 Paris;48.84023;2.3593799
 Space Invader PA_0685;PA_0685; PA; sortie 18 de l'A86; sortie 18 de l'A86;48.8582300000; 2.4881700000
-Space Invader PA_0686;PA_0686; PA; 1 rue Marius Delcher; 1 rue Marius Delcher;48.8286270000; 2.3991390000
+Space Invader PA_0686;PA_0686; PA; muret le long du periph; muret le long du periph;48.8286270000; 2.3991390000
 Space Invader PA_0690;PA_0690; PA; 12 rue Jean-Henri Fabre, Paris;Rue Jean-Henri Fabre, 75018 Paris;48.90117;2.33959
 Space Invader PA_0691;PA_0691; PA; 1 rue Rafflet, Paris;1 Rue Raffet, 75016 Paris;48.85046;2.26569
 Space Invader PA_0692;PA_0692; PA; 24 rue du Docteur Blanche, Paris;24 Rue du Docteur Blanche, 75016 Paris;48.85439;2.2654899
@@ -607,6 +607,7 @@ Space Invader PA_0712;PA_0712; PA; 20 rue de Dunkerque, Paris;20 Rue de Dunkerqu
 Space Invader PA_0713;PA_0713; PA; 1 rue Taylor, Paris;1 Rue Taylor, 75010 Paris;48.8691699;2.35884
 Space Invader PA_0714;PA_0714; PA; 25 rue Watt, Paris;25 Rue Watt, 75013 Paris;48.8262002;2.378369
 Space Invader PA_0715;PA_0715; PA; 3 Cité Aubry, Paris;3 Cité Aubry, 75020 Paris;48.8574;2.39538
+Space Invader PA_0716;PA_0716; PA; Sortie 1 - A3 - Montreuil Centre; Sortie 1 - A3 - Montreuil Centre; 48.8696112,2.4302707
 Space Invader PA_0717;PA_0717; PA; 2 rue des Orteaux, Paris;2 Rue des Orteaux, 75020 Paris;48.85689;2.39798
 Space Invader PA_0718;PA_0718; PA; 39 rue Basfroi, Paris;39 Rue Basfroi, 75011 Paris;48.8556781;2.3784956
 Space Invader PA_0719;PA_0719; PA; 1 rue Camille Desmoulins; 1 rue Camille Desmoulins;48.8585900000; 2.3802000000
@@ -614,11 +615,13 @@ Space Invader PA_0720;PA_0720; PA; 19 rue de la Ferronnerie, Paris;19 Rue de la 
 Space Invader PA_0722;PA_0722; PA; 11 rue Michel Lecomte, Paris;11 Rue Michel le Comte, 75003 Paris;48.86209;2.35622
 Space Invader PA_0723;PA_0723; PA; 12 rue de Parme; 12 rue de Parme;48.8813310000; 2.3275240000
 Space Invader PA_0724;PA_0724; PA; 4 rue Papillon, Paris;4 Rue Papillon, 75009 Paris;48.87595;2.34785
+Space Invader PA_0725;PA_0725; PA; rue de Dunkerke ;rue de Dunkerke ; 48.8794997; 2.3576688
 Space Invader PA_0726;PA_0726; PA; 135 rue de Rome, Paris;135 Rue de Rome, 75017 Paris;48.88572;2.31661
 Space Invader PA_0727;PA_0727; PA; 51 rue de Clichy, Paris;51 Rue de Clichy, 75009 Paris;48.88071;2.32859
 Space Invader PA_0728;PA_0728; PA; 18 rue Caroline, Paris;18 Rue Caroline, 75017 Paris;48.88355;2.32343
 Space Invader PA_0729;PA_0729; PA; cour du Havre; cour du Havre;48.8758400000; 2.3260820000
 Space Invader PA_0730;PA_0730; PA; 6 rue Bleue, Paris;6 Rue Bleue, 75009 Paris;48.87589;2.34726
+Space Invader PA_0731;PA_0731; PA; 85 rue de la mare, 75020 ; 85 rue de la mare, 75020 ; 48.8734598; 2.3863024
 Space Invader PA_0732;PA_0732; PA; 2 rue Jouye-Rouve, Paris;2 Rue Jouye-Rouve, 75020 Paris;48.87325;2.3825599
 Space Invader PA_0733;PA_0733; PA; 38 rue du Moulin Joly; 38 rue du Moulin Joly;48.8705380000; 2.3777140000
 Space Invader PA_0734;PA_0734; PA; 20 rue du Faubourg Montmartre; 20 rue du Faubourg Montmartre;48.8731587650; 2.3430611193
@@ -634,7 +637,7 @@ Space Invader PA_0744;PA_0744; PA; La Bellevilloise, Paris;Paris, Paris;48.86893
 Space Invader PA_0746;PA_0746; PA; 79 rue Charlot, Paris;79 Rue Charlot, 75003 Paris;48.86444;2.3642599
 Space Invader PA_0748;PA_0748; PA; Avenue de la Porte de la Villette, Paris;Métro-Porte de la Villette, Paris;48.89905167;2.387109995
 Space Invader PA_0749;PA_0749; PA; face au conservatoire de Montreuil, Paris;Paris, Paris;48.859021; 2.436419
-Space Invader PA_0750;PA_0750; PA; 4 rue du Sergent Bobillot, Paris;4 Rue Bobillot, 75013 Paris;48.83053;2.35453
+Space Invader PA_0750;PA_0750; PA; 4 rue du Sergent Bobillot, Montreuil;4 Rue Bobillot, Montreuil; 48.857442861543895; 2.4348410861588627
 Space Invader PA_0751;PA_0751; PA; 11 rue Girardot; 11 rue Girardot;48.8605050000; 2.4397180000
 Space Invader PA_0752;PA_0752; PA; 14 boulevard Edouard Branly, Paris;14 Boulevard édouard Branly, 93230 Romainville;48.87612;2.44097
 Space Invader PA_0753;PA_0753; PA; 120 rue d'Avron; 120 rue d'Avron;48.8529520000; 2.4079120000
@@ -643,6 +646,8 @@ Space Invader PA_0755;PA_0755; PA; 6 rue de la Victoire; 6 rue de la Victoire;48
 Space Invader PA_0756;PA_0756; PA; 4 rue Flechier; 4 rue Flechier;48.8766200000; 2.3394130000
 Space Invader PA_0757;PA_0757; PA; place Marcel Sembat, Paris;Square Marcel Sembat, 75018 Paris;48.89879;2.33889
 Space Invader PA_0758;PA_0758; PA; 44 quai du Point du Jour, Paris;44 Quai du Point-du-Jour, 92100 Boulogne-Billancourt;48.8308542;2.2569163
+Space Invader PA_0759;PA_0759; PA; sur un pilotis Canal +; sur un pilotis Canal +; 48.831073; 2.256929
+Space Invader PA_0760;PA_0760; PA; Quai du point du jour, sur le pont ; Quai du point du jour, sur le pont ; 48.834847; 2.262112
 Space Invader PA_0761;PA_0761; PA; 1 quai Louis Blériot, Paris;1 Quai Louis Blériot, 75016 Paris;48.85118;2.2785
 Space Invader PA_0762;PA_0762; PA; face au 99 boulevard de Montmorency, Paris;99 Boulevard de Montmorency, 75016 Paris;48.84859;2.26071
 Space Invader PA_0763;PA_0763; PA; A3/Boulevard Edouard Branly; A3/Boulevard Edouard Branly;48.8759490000; 2.4412320000
@@ -769,7 +774,7 @@ Space Invader PA_0883;PA_0883; PA; 3 rue Curial, Paris;3 Rue Curial, 75019 Paris
 Space Invader PA_0884;PA_0884; PA; 205 rue La Fayette, Paris;205 Rue La Fayette, 75010 Paris;48.88112;2.36356
 Space Invader PA_0885;PA_0885; PA; 36 rue Brey, Paris;36 Rue Brey, 75017 Paris;48.87738;2.2947099
 Space Invader PA_0886;PA_0886; PA; 43 rue Saint-Bernard; 43 rue Saint-Bernard;48.8535370000; 2.3803930000
-Space Invader PA_0887;PA_0887; PA; sur le bastion de Bercy; sur le bastion de Bercy;48.8280060000; 2.3895920000
+Space Invader PA_0887;PA_0887; PA; Rue Robert Etlin - bastion Bercy 1845; Rue Robert Etlin - bastion Bercy 1845;48.8279028; 2.38968
 Space Invader PA_0888;PA_0888; PA; A l'interieur du BaRoom, 21 rue de la roquette ; A l'interieur du BaRoom, 21 rue de la roquette ; 48.854881; 2.372328
 Space Invader PA_0889;PA_0889; PA; 34 rue Mathis; 34 rue Mathis;48.8911600000; 2.3737070000
 Space Invader PA_0890;PA_0890; PA; 175bis rue Championnet; 175bis rue Championnet;48.8945250000; 2.3343370000
@@ -885,6 +890,7 @@ Space Invader PA_0999;PA_0999; PA; 136 rue de la Roquette, Paris;136 Rue de la R
 Space Invader PA_1000;PA_1000; PA;  PA_1001, dans le hall de la Générale;  PA_1001, dans le hall de la Générale;48.8595880000; 2.3795180000
 Space Invader PA_1000;PA_1001; PA;  PA_1001, dans le hall de la Générale;  PA_1001, dans le hall de la Générale;48.8595880000; 2.3795180000
 Space Invader PA_1002;PA_1002; PA; bretelle d'autoroute A86/N406, face au Castorama de Créteil; bretelle d'autoroute A86/N406, face au Castorama de Créteil;48.7789500000; 2.4408000000
+Space Invader PA_1003;PA_1003; PA; 110 boulevard de Courcelles ; 110 boulevard de Courcelles ; 48.878755; 2.300929
 Space Invader PA_1004;PA_1004; PA; 66 rue de Courcelles, Paris;66 Rue de Courcelles, 75008 Paris;48.87764;2.30633
 Space Invader PA_1005;PA_1005; PA; 89 rue Oberkampf, Paris;89 Rue Oberkampf, 75011 Paris;48.86529;2.37546
 Space Invader PA_1006;PA_1006; PA; 9 Rue Bergère, Paris, Île-de-France;9 Rue Bergère, Paris, Île-de-France;48.872173; 2.346690
@@ -1327,10 +1333,26 @@ Space Invader PA_1443;PA_1443; PA; place du marché Brie comte Robert ;place du 
 Space Invader PA_1444;PA_1444; PA; 3 rue de cluny, au dessus du mur ; 3 rue de cluny, au dessus du mur ; 48.826631; 2.364058
 Space Invader PA_1445;PA_1445; PA; 30 rue Copreaux ;30 rue Copreaux ; 48.841311; 2.307153
 Space Invader PA_1446;PA_1446; PA; a l'angle du Bar le Falguiere; a l'angle du Bar le Falguiere; 48.844658; 2.318228
+Space Invader PA_1447;PA_1447; PA; rue Santos Dumont ; 48.832701; 2.304346
 Space Invader PA_1448;PA_1448; PA; Place du commerce 75015; Place du commerce 75015; 48.844767; 2.293050
 Space Invader PA_1449;PA_1449; PA; Café de l'esplanade, Place des invalides ;Café de l'esplanade, Place des invalides ; 48.858165; 2.311014
 Space Invader PA_1451;PA_1451; PA; 130 cours de Vincennes, Credit Mutuel, 75012 ;30 cours de Vincennes, Credit Mutuel, 75012 ;  48.84679043811977; 2.410654074789164
 Space Invader PA_1452;PA_1452; PA; rue de nemours, 75011 ; rue de nemours, 75011 ; 48.865753602651814; 2.3725408404409465
+Space Invader PA_1453;PA_1453; PA; 157 rue du Suffren ; 157 rue du Suffren ; 48.84641237159181; 2.308776544938564
+Space Invader PA_1454;PA_1454; PA; 158 rue Saint Charles ;158 rue Saint Charles ; 48.842236; 2.281460
+Space Invader PA_1455;PA_1455; PA; 35 rue Blanche; 35 rue Blanche;48.880144; 2.331413
+Space Invader PA_1456;PA_1456; PA; 31 bd Saint Martin; 31 bd Saint Martin; 48.868481; 2.359330
+Space Invader PA_1457;PA_1457; PA; Librairie vers 31 rue Sedaine ; Librairie vers 31 rue Sedaine ; 48.857340; 2.375580
+Space Invader PA_1458;PA_1458; PA; 61 rue Lafayette; 61 rue Lafayette; 48.875794747; 2.343738376
+Space Invader PA_1459;PA_1459; PA; Theatre Le Palace 8 rue Faubourg Montmartre; Theatre Le Palace 8 rue Faubourg Montmartre ; 48.872116; 2.343191
+Space Invader PA_1460;PA_1460; PA; 37 avenue Gabriel Peri, Montreuil; 37 avenue Gabriel Peri, Montreuil; 48.856702; 2.443835
+Space Invader PA_1461;PA_1461; PA; Pharmacie rue Beccaria ;Pharmacie rue Beccaria ; 48.846458; 2.379343
+Space Invader PA_1462;PA_1462; PA; Entrée Cité des fleurs ; Entrée Cité des fleurs ; 48.891338; 2.319351
+Space Invader PA_1463;PA_1463; PA; rue des écoles, 75005 ; rue des écoles, 75005 ; 48.848721; 2.348038
+Space Invader PA_1464;PA_1464; PA; rue des Carmes, 75005 ; rue des Carmes, 75005 ; 48.848160; 2.347075
+Space Invader PA_1465;PA_1465; PA; Porte de la Villette, sur le pied du pont ;Porte de la Villette, sur le pied du pont ; 48.898157; 2.386280
+Space Invader PA_1466;PA_1466; PA; arche Quai de Seine, pres Notre Dame ;arche Quai de Seine, pres Notre Dame ; 48.853333; 2.346315
+Space Invader PA_1467;PA_1467; PA; sortie RER Villiers sur Marne, 18 rue Maurice Schumann; sortie RER Villiers sur Marne, 18 rue Maurice Schumann; 48.82312299881752; 2.5438697283611535
 Space Invader VRS_001;VRS_001;VRS; (Lahire) 2 rue du Baillage, Versailles ; 2 rue du Baillage, Versailles ; 48.807655; 2.130848
 Space Invader VRS_002;VRS_002;VRS; rue des 2 Portes, Versailles ; rue des 2 Portes, Versailles ; 48.806339; 2.131039
 Space Invader VRS_003;VRS_003;VRS; 1 rue des Deux Portes, Versailles ; rue des 2 Portes, Versailles ; 48.805434; 2.130325

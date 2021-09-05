@@ -23,7 +23,7 @@ load(file="data/invader_final.Rdata")
 
 
 #### >> CHOOSE YOUR ADDRESS IN  <<
-  myAdr <- "198 rue du Faubourg Saint-Antoine, Paris"
+  myAdr <- "1 rue du commerce, 75015 Paris"
   bbox.km <- 1
   nbmax.invader <- 30
 #### >>>>>> <<<<<<
