@@ -125,7 +125,6 @@ all <- data.frame(code = (1:1467))
 all$code <- paste0("PA_", sprintf("%04d",all$code))
 missing <- all %>% anti_join(invader.final, by = "code")
 missing$code <- stringr::str_trim(missing$code)
-missing$final <- paste0("Space Invader ", missing$code, ";" , missing$code, "; PA; ")
-write.csv(missing$final , file = "./data/OUT_invader.to.add.csv", row.names=F, quote = F)
+write.csv(missing , file = "./data/OUT_invader.to.add.csv", row.names=F, quote = F)
 
 
