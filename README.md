@@ -7,7 +7,7 @@ Using a list of invaded address in Paris, geolocate them on a map, and draw dedi
 
 
 
-**[NEW]** You can now use Trip.R to get an automated trip based on the input address and # of invaders you wan't to get. 
+**[BETA]** use Trip.R to get an automated trip based on the input address and # of invaders you wan't to get (so far pedestrian automation of travelling salesman is far from being optimized...). 
 
 
 ![invadertrip](./img/invaders-trip.png)   

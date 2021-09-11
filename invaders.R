@@ -15,6 +15,9 @@ library(rvest)
 library(knitr)
 library(rmarkdown)
 
+#### Code of invaders that are inside buildings / not accessible easily
+code.inside <- c("PA_0603", "PA_1431", "PA_0773", "PA_0799")
+
 
 options(stringsAsFactors=FALSE)
 
@@ -23,6 +26,7 @@ options(stringsAsFactors=FALSE)
 invader.icon <- iconList(
   Got.it = makeIcon(iconUrl = "./img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
   Not.yet = makeIcon(iconUrl = "./img/invaders-pink-logo.png",   iconWidth = 20, iconHeight = 20),
+  Not.yet.inside = makeIcon(iconUrl = "./img/invaders-yellow-logo.png",   iconWidth = 20, iconHeight = 20),
   Not.invader = makeIcon(iconUrl = "./img/not-invader.png",   iconWidth = 20, iconHeight = 20),
   Desactivated = makeIcon(iconUrl = "./img/desactivated.png",   iconWidth = 20, iconHeight = 20)
 )
@@ -44,6 +48,8 @@ table(invader.all$artist)
 # tag status (not perfect, but as invaders are from many city PA, NY, LY..., easier that way)
 invader.all <- invader.all %>% 
   mutate( status = ifelse(artist == "XX", "Not.invader", "Not.yet")) 
+
+invader.all <- invader.all %>% mutate(status = ifelse((status == "Not.yet" & code %in% code.inside), "Not.yet.inside", "Not.yet"))
 
 
 # read alreadly flashed invaders

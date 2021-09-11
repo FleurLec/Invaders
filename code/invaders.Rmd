@@ -25,6 +25,7 @@ load("../data/OUT_invader_final.Rdata")
 invader.icon <- iconList(
   Got.it = makeIcon(iconUrl = "../img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
   Not.yet = makeIcon(iconUrl = "../img/invaders-pink-logo.png",   iconWidth = 20, iconHeight = 20),
+  Not.yet.inside = makeIcon(iconUrl = "../img/invaders-yellow-logo.png",   iconWidth = 20, iconHeight = 20),
   Not.invader = makeIcon(iconUrl = "../img/not-invader.png",   iconWidth = 20, iconHeight = 20),
   Desactivated = makeIcon(iconUrl = "../img/desactivated.png",   iconWidth = 20, iconHeight = 20)
 )
