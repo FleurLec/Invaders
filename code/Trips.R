@@ -19,12 +19,12 @@ library(htmltools)
 
 token <- readLines("./OSMtoken")
 ors_api_key(token)
-load(file="data/invader_final.Rdata")
+load(file="./data/OUT_invader_final.Rdata")
 
 
 #### >> CHOOSE YOUR ADDRESS IN  <<
-  myAdr <- "1 rue du commerce, 75015 Paris"
-  bbox.km <- 1
+  myAdr <- "Pont de Bir Hakeim, Paris"
+  bbox.km <- 3
   nbmax.invader <- 30
 #### >>>>>> <<<<<<
   
@@ -83,7 +83,7 @@ start <- geocode_OSM(myAdr)
   leaflet(data = invader.select, width = "100%") %>%
     addTiles() %>%
     setView(lng = lon.med, lat = lat.med, zoom = 13) %>%
-    addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, address))) %>%
+    addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, invaders.geo))) %>%
     addMarkers(lon.start, lat.start, icon = start.icon) %>%
     addFullscreenControl()  %>%
     addGeoJSON(x, fill=FALSE) %>%

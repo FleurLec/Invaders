@@ -71,6 +71,7 @@ PA_0030,44 Rue Quincampoix. 75004 Paris,48.86094,2.35052
 PA_0031, 30 rue de Venise,48.8612500, 2.3506800
 PA_0032,108 Rue Vieille-du-Temple. 75003 Paris,48.86095,2.36281
 PA_0034,61 Rue Vieille-du-Temple. 75004 Paris,48.85862,2.35847
+PA_0035, 24 rue pavée, 48.8569937,2.359800
 PA_0036,7 Boulevard Vincent Auriol. 75013 Paris,48.83694,2.37335
 PA_0037, 8 rue du Pasteur Wagner,48.8555700000, 2.3697630000
 PA_0038, 1 passage Thérié,48.8532030000, 2.3749370000
@@ -89,7 +90,7 @@ PA_0055,43 Rue du Moulin des Prés. 75013 Paris,48.82765,2.3529399
 PA_0056,10 Rue Simonet. 75013 Paris,48.82873,2.35155
 PA_0058,14 Rue Louise Weiss. 75013 Paris,48.83334,2.37073
 PA_0059,1 Rue Lacordaire. 75015 Paris,48.84427,2.2846099
-PA_0060,Impasse Saint-Eustache. 75001 Paris,48.86376,2.34547
+PA_0060, Eglise Saint-Eustache. 75001 Paris,48.86365,2.3445
 PA_0061,2 Rue des Petits-Carreaux. 75002 Paris,48.86639,2.34726
 PA_0062,99 Rue Réaumur. 75002 Paris,48.86764,2.3455499
 PA_0063, 74 rue de Charonne,48.8534210000, 2.3798630000
@@ -103,6 +104,7 @@ PA_0070, 1 rue de la Verrerie,48.8568290000, 2.3554650000
 PA_0071, 5 rue de Fourcy,48.8548020000, 2.3590200000
 PA_0072,Rue Charles Luizet. 75011 Paris,48.86166,2.36732
 PA_0073,93 Rue Jean-Pierre Timbaud. 75011 Paris,48.86834,2.37926
+PA_0074, 20 rue des coutures Saint Gervais, 48.8603726,2.3615809
 PA_0075, sur le piédestal du lion,48.8342950000, 2.3324660000
 PA_0076, statue de Jeanne &quot,48.8383300000, 2.3570130000
 PA_0077,10 Rue de Fleurus. 75006 Paris,48.84713,2.33128
@@ -115,7 +117,9 @@ PA_0083,Paris. Paris,48.864766, 2.364624
 PA_0084,15 Rue du Pas-de-la-Mule. 75004 Paris,48.85597,2.36678
 PA_0085, 58 rue de Charonne,48.8531940000, 2.3781920000
 PA_0087, escalier du port de la Gare,48.8373940000, 2.3741620000
+PA_0089, Passage de la Canopée,48.8627477,2.3465595
 PA_0090, métro Etienne Marcel,48.8637200000, 2.3489900000
+PA_0091, 2 passage saint Antoine, 48.853194,2.374088
 PA_0092,8 Rue de la Ferronnerie. 75001 Paris,48.86034,2.34734
 PA_0093,Pont du Carrousel. Paris,48.86000061,2.333333015
 PA_0094, porte Fleurus du jardin du Luxembourg,48.8470400000, 2.3326300000
@@ -125,8 +129,10 @@ PA_0098,  PA_0099. sur la fontaine Saint-Michel,48.8531920000, 2.3437020000
 PA_0099,  PA_0099. sur la fontaine Saint-Michel,48.8531920000, 2.3437020000
 PA_0102,42 Boulevard de l'Hépital. 75005 Paris,48.84008,2.36155
 PA_0103, 30 rue du Temple. dans la cour,48.8592530000, 2.3540450000
+PA_0104, périphérique sur le pont, 48.8533403,2.4143583
 PA_0105, à droite du lion de la statue,48.8674400000, 2.3638000000
 PA_0106,2 Rue Charlemagne. 75004 Paris,48.85392,2.36188
+PA_0108, sur le haut du pont Quai Branly, 48.8594308,2.2936684
 PA_0109,Musée National d'Art Moderne. Paris,48.860, 2.3526
 PA_0110,91 Rue Quincampoix. 75003 Paris,48.86257,2.35122
 PA_0111, école primaire Hermel,48.8915980000, 2.3446640000
@@ -141,10 +147,14 @@ PA_0119,102 Rue de Bagnolet. 75020 Paris,48.85936,2.40271
 PA_0120,44 Quai de Jemmapes. 75010 Paris,48.86954,2.36718
 PA_0121, 7 rue des Saints-Pères,48.8576290000, 2.3327970000
 PA_0122,Rue de la Clef. 75005 Paris,48.84211,2.35265
+PA_0123, pont de Bercy, 48.838739,2.3756806
 PA_0124,40 Rue de l'Arcade. 75008 Paris,48.87348,2.32444
 PA_0125, sud de la Fontaine aux Lions,48.8395400000, 2.3958100000
 PA_0126, pont d'Iéna (rive gauche),48.8592220000, 2.2926810000
+PA_0127, 10 avenue du trône sur le pavillon, 48.8480026,2.3967744
 PA_0128, 1 rue de Charonne,48.8520000000, 2.3737600000
+PA_0129 ,pilone au milieu du périph intérieur, 48.8237858,2.3823818
+PA_0130 , pilone au milieu du périph exterieur,48.8225149,2.3807065
 PA_0131,53 Rue des Orteaux. 75020 Paris,48.8564999,2.40307
 PA_0132,97 Rue des Maraéchers. 75020 Paris,48.85627,2.40529
 PA_0133,7 Passage de la Main-d'Or. 75011 Paris,48.8516,2.37788
@@ -173,7 +183,11 @@ PA_0166,21 Rue Georges Auric. 75019 Paris,48.88519,2.38525
 PA_0167,  PA_0168. 37 rue Richelieu,48.8655230000, 2.3366740000
 PA_0168,  37 rue Richelieu,48.8655230000, 2.3366740000
 PA_0169,2 Rue du Mont-Cenis. 75018 Paris,48.8867,2.34151
+PA_0170, 1 rue Saint Eleuthère, 48.8861083,2.3413708
+PA_0171, balustrade Sous le sacré coeur, 48.8855151,2.3432753
 PA_0172, 21 rue Carpeaux,48.8911900000, 2.3318000000
+PA_0173, sur le trottoir 64 rue traversière, 48.8503534,2.3756789
+PA_0174 , 68 rue des Cévennes, 48.8415966,2.2824314
 PA_0175,18 Passage du Chantier. 75012 Paris,48.85151,2.37352
 PA_0176,12 Rue Cassette. 75006 Paris,48.84984,2.3307699
 PA_0177,Rue du 29 Juillet. 75001 Paris,48.86493,2.33047
@@ -185,6 +199,7 @@ PA_0182,18 Rue Madame. 75006 Paris,48.8508535,2.3317096
 PA_0183,19 Rue des Mystéres de Paris. 95400 Villiers-le-Bel,49.006,2.41281
 PA_0184,2 Rue Mignon. 75006 Paris,48.85218,2.34161
 PA_0185, 11 rue Scribe. 75009, 48.872699,2.33108
+PA_0186, 2 rue Jacob, 48.8546269,2.3365424
 PA_0188, 39 rue des Francs-Bourgeois,48.8578800000, 2.3601800000
 PA_0189,3 Rue Geoffroy l'Angevin. 75004 Paris,48.86055,2.35442
 PA_0190, 1 rue Stendhal,48.8602080000, 2.4037040000
@@ -198,6 +213,7 @@ PA_0197,rue joseph de maistre. Paris,48.886669,2.332505
 PA_0198, 31 rue saint marthe.75010 Paris, 48.874314,2.372519 
 PA_0200,194 Rue de Bercy. 75012 Paris,48.8446575,2.3722657
 PA_0201,19 Rue Georges Lardennois. 75019 Paris,48.87807,2.37691
+PA_0202, Quai de Bercy. sous pont National direction Ouest, 48.8283439,2.3884342
 PA_0205, parvis de Saint-Vincent-de-Paul,48.8780730000, 2.3516800000
 PA_0206,Place de Clichy. Paris,48.88351822,2.327394009
 PA_0207,7 Rue Damrémont. 75018 Paris,48.8876599,2.33256
@@ -208,6 +224,7 @@ PA_0212, 123 boulevard de Charonne,48.8570500000, 2.3930500000
 PA_0213, 84 rue Mouffetard,48.8420990000, 2.3496830000
 PA_0215,  PA_1056. 0 rue Montgallet,48.8425920000, 2.3861570000
 PA_0216,67 Rue de l'Amiral Mouchez. 75013 Paris,48.82138,2.34313
+PA_0217, Bout de l'ile coté Seine, 48.851717, 2.352547
 PA_0218,Paris. Paris,48.844212, 2.372015
 PA_0219, face au 8 rue André Voguet,48.8195700000, 2.3736700000
 PA_0220,Métro-Quai de la Gare. Paris,48.83745956,2.373749971
@@ -223,6 +240,7 @@ PA_0229,Rue Antoine Dubois. 75006 Paris,48.85121,2.33987
 PA_0231,1 Rue Tiquetonne. 75002 Paris,48.86428,2.34995
 PA_0232, 11 rue Française,48.8645430000, 2.3476720000
 PA_0233,1 Rue des Cévennes. 75015 Paris,48.84444,2.2762699
+PA_0235, 6 rue de Normandie, 48.8634615,2.3641164
 PA_0236, 16 rue Magellan,48.8709500000, 2.2996400000
 PA_0238, 8 rue François 1er,48.8660540000, 2.3075210000
 PA_0240,23 Boulevard Diderot. 75012 Paris,48.84598,2.3735
@@ -238,7 +256,10 @@ PA_0254, 101 avenue des Champs-Élysées,48.8718090000, 2.3005410000
 PA_0255, sous le banc face à l'arrêt de bus Varsovie,48.8612970000, 2.2913540000
 PA_0256, place de Varsovie,48.8608660000, 2.2918050000
 PA_0257, métro Passy,48.8576960000, 2.2857130000
-PA_0258,29 Avenue de Lamballe. 75016 Paris,48.85439,2.27883
+PA_0258,29 Avenue de Lamballe. 75016 Paris,48.852623, 2.281462
+PA_0259, Brasserie d'Auteuil, 48.8481647,2.2597521
+PA_0260, au pied de la colonne 2 rue d'Auteuil, 48.8475406,2.2686587
+PA_0261, Chez Gudule, 48.8439549,2.4022498
 PA_0262, place de la Nation (côté avenue du Trône),48.8480060000, 2.3972850000
 PA_0263, sur les marches du métro Victor Hugo,48.8699500000, 2.2856630000
 PA_0264,115 Rue de la Tour. 75116 Paris,48.86298,2.27546
@@ -261,9 +282,17 @@ PA_0283, 101 rue du Faubourg du Temple,48.8708400000, 2.3735500000
 PA_0285, passage Ben Aiad,48.8660300000, 2.3460700000
 PA_0286,28 Rue du Chevalier de la Barre. 75018 Paris,48.88751,2.3442599
 PA_0287,12 Rue Vieille-du-Temple. 75004 Paris,48.85646,2.35681
+PA_0288, au sol devant Chen MArket, 48.871939,2.376613
 PA_0291, 15 rue des Plâtrières,48.8678677500, 2.3901218175
+PA_0292, dans le café Zorba, 48.8719444,2.3752919
 PA_0293,84 Rue du Faubourg du Temple. 75011 Paris,48.8706699,2.3734099
+PA_0294, rue de Moussy, 48.8582427,2.3560122
 PA_0295,4 Rue du Jour. 75001 Paris,48.86378,2.34486
+PA_0296, au sol devant magasin qui fait l'angle 36 rue Etienne marcel,48.8649,2.345
+PA_0297, au sol proche passage piéton, 48.8653902,2.3427757
+PA_0298, au sol 58 rue Saint Anne, 48.8680185,2.3363966
+PA_0299, au sol devant la station Chevaleret, 48.8345466,2.3670058
+PA_0300, au sol devant le bar le Naja,48.8337407,2.3539539
 PA_0301,44 Rue de Charenton. 75012 Paris,48.85025,2.37346
 PA_0302,rue de l'encheval,48.879049,2.389844
 PA_0303, 24 passage Boiton,48.8268200000, 2.3507500000
@@ -274,6 +303,7 @@ PA_0309,Boulevard de l'Amiral Bruix. 75116 Paris,48.87542,2.2799
 PA_0310,Métro-Porte de Saint-Cloud. Paris,48.83779144,2.256160021
 PA_0311, face au 5 rue Bréa,48.8435790000, 2.3302930000
 PA_0312,Saint-Pierre de Montrouge. Paris,48.82846451,2.327204943
+PA_0313, au sol sur la route 48 rue Saint Honoré, 48.861173,2.3440884
 PA_0315,32 Boulevard Auguste Blanqui. 75013 Paris,48.83044,2.35136
 PA_0316,Rue des Artistes. 75014 Paris,48.82649,2.3346
 PA_0317,Fondation Cartier Pour L Art Contemporain. Paris,48.83729935,2.331899881
@@ -281,20 +311,25 @@ PA_0320, 34 rue du Faubourg Saint-Jacques,48.8366220000, 2.3381290000
 PA_0321, 17 rue Malebranche,48.8465370000, 2.3420150000
 PA_0322, 77 allée du Séminaire,48.8488610000, 2.3328830000
 PA_0323,102 Rue de Charonne. 75011 Paris,48.85441,2.38444
+PA_0324, au sol 25 rue du 29 juillet, 48.8654506,2.3308159
 PA_0325, 17 rue Robineau,48.8649600000, 2.3939700000
+PA_0326,10 rue de picpus, 48.8475883,2.3908074
 PA_0327, 29 rue du Faubourg Poissonnière,48.8730100000, 2.3478100000
 PA_0328,40 Rue étienne Marcel. 75002 Paris,48.86512,2.34422
 PA_0329,14 Rue Pajol. 75018 Paris,48.88585,2.36091
 PA_0330, 102 rue du Faubourg Poissonnière,48.8784070000, 2.3492660000
 PA_0331,2 Rue Pierre au Lard. 75004 Paris,48.85945,2.35306
 PA_0332,41 Rue du Repos. 75020 Paris,48.85954,2.38954
+PA_0333, 42 rue condorcet, 48.8799325,2.3422319
 PA_0334,Place Valhubert. 75013 Paris,48.84376,2.36538
 PA_0335, 135 boulevard de la Villette,48.8821240000, 2.3699490000
 PA_0336, centre d'Hygiène Sociale,48.8904390000, 2.3532390000
 PA_0339,Square du Docteur Grancher. Paris,48.86534119,2.39470005
 PA_0340, 45 quai de Bourbon,48.8535600000, 2.3536300000
+PA_0341, rue de thorigny, 48.86045,2.3640687
 PA_0342,19 Rue Laferriére. 75009 Paris,48.87904,2.33705
 PA_0343, pont d'Iéna (rive droite),48.8601730000, 2.2911050000
+PA_0344, entrée du tunnel avenue de New York, 48.859924,2.2898499
 PA_0345,95 Rue de Sévres. 75006 Paris,48.84882,2.32154
 PA_0346, 16 boulevard Pasteur,48.8429050000, 2.3122450000
 PA_0347,Passage des épinettes. 75014 Paris,48.843361, 2.325374
@@ -306,10 +341,12 @@ PA_0352, 21 rue d'Alsace,48.8776748220, 2.3582142591
 PA_0353, sortie de métro face au 27 boulevard de la Madeleine,48.8694600000, 2.3247500000
 PA_0354,13 Rue Jean Lantier. 75001 Paris,48.8585474,2.3458221
 PA_0355,4 Rue de la Grande-Truanderie. 75001 Paris,48.86268,2.34978
+PA_0356, 25 rue debelleyme, 48.862162,2.362958
 PA_0357,21 Boulevard Lefebvre. 75015 Paris,48.8320999,2.29021
 PA_0358, 14 rue de Savies,48.8714630000, 2.3912850000
 PA_0359,45 Rue Saint-Roch. 75001 Paris,48.86649,2.3329
 PA_0360,Rue Saint-Roch. 75001 Paris,48.86571,2.33248
+PA_0361, rue Abel Hovelacque, 48.830727,2.3505063
 PA_0362, en face de Chez Prune,48.8717240000, 2.3647040000
 PA_0363, 116 avenue de Choisy,48.8262982710, 2.3600086569
 PA_0364, 347 rue de Vaugirard,48.8371100000, 2.2963800000
@@ -328,9 +365,11 @@ PA_0378,45 Rue de Poitou. 75003 Paris,48.86172,2.36133
 PA_0379, 17 rue des Blancs-Manteaux,48.8588100000, 2.3573100000
 PA_0380, port du Gros-caillou,48.8629470000, 2.3092890000
 PA_0381,Place Joffre. 75007 Paris,48.851529, 2.301350
+PA_0382, pont de Bir Hackeim, 48.855669,2.287653
 PA_0384,26 Rue du Moulin-Joly. 75011 Paris,48.86988,2.3782899
 PA_0385,41 Rue Dunois. 75013 Paris,48.83151,2.3685299
 PA_0386,Boulevard des Batignolles. 75017 Paris,48.88284,2.32365
+PA_0387, 2 bd de Courcelles au sol entre les 2 BAL, 48.8813384,2.3130094
 PA_0388,Gare Montparnasse. Paris,48.84000015,2.318610907
 PA_0389,86 Rue Botzaris. 75019 Paris,48.87943,2.3894
 PA_0390,1 Passage Gustave Lepeu. 75011 Paris,48.8560299,2.38639
@@ -345,13 +384,13 @@ PA_0399, pont de l'Alma,48.8625860000, 2.3021840000
 PA_0400, 93 quai d'Orsay,48.8621660000, 2.3022840000
 PA_0401,Paris. Paris,48.843974, 2.355034
 PA_0402, quai Anantole France,48.8624400000, 2.3201500000
-PA_0403,Parc Georges Brassens. Paris,48.83274078,2.300570011
+PA_0403,Parc Georges Brassens. Paris,48.832130, 2.302912
 PA_0404,2 Place de la Bourse. 75002 Paris,48.86958,2.34211
 PA_0405,110 Rue Castagnary. 75015 Paris,48.83019,2.30559
 PA_0406, 4 rue de Braque,48.8607470000, 2.3571330000
 PA_0407,93 Rue Vieille-du-Temple. 75003 Paris,48.86011,2.36091
 PA_0409, Ex speedy rue oberkampf, 48.8652042,2.3755027
-PA_0410,Rue de la Mare. 75020 Paris,48.87104,2.38982
+PA_0410,Rue de la Mare. 75020 Paris,48.868359, 2.388186
 PA_0411,68 Rue Orfila. 75020 Paris,48.867,2.39798
 PA_0412, 15 rue Robineau,48.8647990000, 2.3935520000
 PA_0413,3 Boulevard Malesherbes. 75008 Paris,48.86996,2.32306
@@ -416,6 +455,7 @@ PA_0479, place saint opportune, 48.8593996,2.3470603
 PA_0480,14 Rue du Roi de Sicile. 75004 Paris,48.85591,2.35968
 PA_0481, sous la plaque de rue du coin du parc,48.8449740000, 2.3324820000
 PA_0482,24 Rue Pavée. 75004 Paris,48.85711,2.36172
+PA_0483, 7 rue du Bourg l'Abbé, 48.8639077,2.3514469
 PA_0484,24 Rue de Vienne. 75008 Paris,48.87817,2.3228399
 PA_0485, 15 rue Paul Valérie,48.8702640000, 2.2899090000
 PA_0486, 26 rue Vaneau,48.8529090000, 2.3190900000
@@ -436,6 +476,7 @@ PA_0501, au pied des escaliers du boulevard du Temple,48.8663610000, 2.364673000
 PA_0502,29 Rue Censier. 75005 Paris,48.84035,2.35292
 PA_0503,74 Rue de Turenne. 75003 Paris,48.8604,2.36468
 PA_0504,52 Rue des Rosiers. 75004 Paris,48.85774,2.35832
+PA_0505, 12 rue de Thorigny, 48.8598031,2.3624561
 PA_0506,Square Pierre Lazareff. 75002 Paris,48.86715,2.34768
 PA_0507,21 Rue Juliette Dodu. 75010 Paris,48.87531,2.36906
 PA_0508, 9 rue des Prouvaires,48.8617020000, 2.3441750000
@@ -443,7 +484,7 @@ PA_0509, Les halles sur un muret, 48.8623656,2.3437436
 PA_0510, place de la Bastille,48.8532656000, 2.3706489801
 PA_0514,Palais de Tokyo. Paris,48.86412048,2.297209978
 PA_0515,278 Rue du Faubourg Saint-Antoine. 75012 Paris,48.84848,2.39362
-PA_0516,Rue de Ménilmontant. 75020 Paris,48.86849,2.38888
+PA_0516,Rue de Ménilmontant. 75020 Paris,48.8702959,2.3936127
 PA_0517,13 Rue Froissart. 75003 Paris,48.86166,2.3654099
 PA_0518, rue Emie Durkheim, 48.83292,2.3786262
 PA_0520, viaduc rue Jacques Kablé,48.8355460000, 2.4946960000
@@ -464,11 +505,13 @@ PA_0534,Palais de Tokyo. Paris,48.86412048,2.297209978
 PA_0535,Rue de Terre-Neuve. 75020 Paris,48.85466,2.39864
 PA_0536, 7 rue de la Planchette,48.8395200000, 2.3887100000
 PA_0537, piscine espace Oberkampf, 48.8668804,2.3823461
+PA_0538, 82 boulevard Sebastopol, 48.8839676,2.3324353
 PA_0539, 30 rue Beaubourg dans la cour,48.8620140000, 2.3541910000
 PA_0540, impasse Questre,48.8682000000, 2.3813100000
 PA_0541, oil sur la route, 48.8555523,2.3746251
 PA_0542,5 Rue de Rambouillet. 75012 Paris,48.84349,2.37931
 PA_0543,1 Rue Duchefdelaville. 75013 Paris,48.8324799,2.37094
+PA_0544, 1 rue keller, 48.8535201,2.3744474
 PA_0545, 62 rue Villiers de l'Isle Adam,48.8676100000, 2.3965900000
 PA_0546, 320bis rue de Charenton,48.8319830000, 2.3971700000
 PA_0547,Place Frehel. 75020 Paris,48.87314,2.38178
@@ -553,7 +596,7 @@ PA_0628, rue didot, 48.8273059,2.3144624
 PA_0629,Impasse Robiquet. 75006 Paris,48.84382,2.32568
 PA_0630,30 Rue de Martignac. 75007 Paris,48.85755,2.31811
 PA_0631,entree Nord de l'Opera. Paris,48.872880, 2.331271
-PA_0632, rue Dénoyez, 8.8723465,2.3781411
+PA_0632, rue Dénoyez, 48.8723465,2.3781411
 PA_0633, Point Ephémère quai de Valmy, 48.8820441,2.3688514
 PA_0634, rue hautefeuille, 48.8520972,2.3426428
 PA_0635, 21 rue de Vaugirard,48.8487300000, 2.3326440000
@@ -609,7 +652,7 @@ PA_0684,23BIS Rue Poliveau. 75005 Paris,48.84023,2.3593799
 PA_0685, sortie 18 de l'A86,48.8582300000, 2.4881700000
 PA_0686, muret le long du periph,48.8286270000, 2.3991390000
 PA_0687, Pont National ,48.8280059, 2.3872916
-PA_0689,Place du general Ingold. 75019 ,48.8721518, 2.3747225
+PA_0689,Place du general Ingold. 75019 ,48.8733395,2.377059 
 PA_0690,Rue Jean-Henri Fabre. 75018 Paris,48.90117,2.33959
 PA_0691,1 Rue Raffet. 75016 Paris,48.85046,2.26569
 PA_0692,24 Rue du Docteur Blanche. 75016 Paris,48.85439,2.2654899
@@ -620,7 +663,7 @@ PA_0696,9 Rue Debelleyme. 75003 Paris,48.86094,2.36339
 PA_0697,14 Boulevard Richard Lenoir. 75011 Paris,48.85496,2.37039
 PA_0698, 10 rue Saint-Sabin,48.8551180000, 2.3720800000
 PA_0699, 127 rue des Pyrénées,48.8573600000, 2.4039300000
-PA_0700,65 Rue des Prés-Paris. 74970 Marignier,46.0842519,6.5133615
+PA_0700, 18 rue du Volga,48.8524922,2.4037972
 PA_0701, 1 rue Godefroy Cavaignac,48.8540200000, 2.3818700000
 PA_0702, 98 rue de Charonne,48.8538091970, 2.3818498849
 PA_0703,47 Rue de Charonne. 75011 Paris,48.85338,2.3776799
@@ -649,7 +692,7 @@ PA_0727,51 Rue de Clichy. 75009 Paris,48.88071,2.32859
 PA_0728,18 Rue Caroline. 75017 Paris,48.88355,2.32343
 PA_0729, cour du Havre,48.8758400000, 2.3260820000
 PA_0730,6 Rue Bleue. 75009 Paris,48.87589,2.34726
-PA_0731, 85 rue de la mare. 75020 , 48.8734598, 2.3863024
+PA_0731, 85 rue de la mare. 75020 , 48.873743, 2.388295
 PA_0732,2 Rue Jouye-Rouve. 75020 Paris,48.87325,2.3825599
 PA_0733, 38 rue du Moulin Joly,48.8705380000, 2.3777140000
 PA_0734, 20 rue du Faubourg Montmartre,48.8731587650, 2.3430611193
@@ -760,7 +803,7 @@ PA_0839,20 Rue de la Grande-Truanderie. 75001 Paris,48.86292,2.34876
 PA_0840,23 rue Pierre Lescot , 48.863701, 2.349066
 PA_0841,4 Rue Marie Stuart. 75002 Paris,48.86502,2.34835
 PA_0842, PA_1040. 32 rue Saint-Roch,48.8665030000, 2.3331210000
-PA_0843,Rue de Rivoli. 75001 Paris,48.86256,2.33583
+PA_0843,Rue de Rivoli angle rue cambon. 75001 Paris,48.8660386,2.325192
 PA_0844,20 Rue de Courcelles. 75008 Paris,48.87418,2.31027
 PA_0845,73 Rue La Boétie. 75008 Paris,48.87236,2.3097
 PA_0846,4 Rue Réaumur. 75003 Paris,48.8648499,2.35941
@@ -945,7 +988,7 @@ PA_1025,5 Place Saint-Augustin. 75008 Paris,48.8751,2.3192499
 PA_1026,52 Grande Rue Charles de Gaulle. 92600 Asniéres-sur-Seine,48.90827,2.28647
 PA_1027,Cité Aubry. 75020 Paris,48.85751,2.3957799
 PA_1028,9 Rue des Maronites. 75020 Paris,48.86815,2.38354
-PA_1029,105 Rue du Faubourg du Temple. Paris. Île-de-France, 48.871806, 2.376339
+PA_1029,105 Rue du Faubourg du Temple. Paris. Île-de-France, 48.8712788,2.3561934
 PA_1030,41 Rue des Bourdonnais. 75001 Paris,48.86056,2.34552
 PA_1031,Paris. Paris,48.900718, 2.388913
 PA_1032, 51 rue de Turenne,48.8582240000, 2.3643990000
@@ -1269,14 +1312,14 @@ PA_1349, 51 rue de la Tombe Issoire,48.8302300000, 2.3342500000
 PA_1350, Metro Duroc. 133 rue de Sèvres, 48.847221, 2.317833
 PA_1351, 63 rue du montparnasse. 75015 , 48.8418475, 2.325359
 PA_1352, 12 avenue de Choisy. 75013, 48.8258093,2.3580268
-PA_1353, 12 rue Philippe de Champagne. 75013, 8.8329147,2.3543995
+PA_1353, 12 rue Philippe de Champagne. 75013, 48.8329147,2.3543995
 PA_1354, 20 rue de l'aqueduc. 75010,  48.8807989, 2.3604982
 PA_1355, 1 rue des petits hotels. 75010, 48.8773075, 2.3547809
 PA_1356, 131 Boulevard Diderot. 75012 PARIS , 48.8480746, 2.3928612
 PA_1357, 2 rue de Saint-Petersbourg,48.87993,2.324083
 PA_1358, 202 rue Saint Jacques. 75005 , 48.8457025, 2.3421895
 PA_1359, Place de la Sorbonne. 75005,  48.848868, 2.341929
-PA_1360, 63 Rue Saint-Jacques. 75005 Paris, 48.8501254,2.3432384
+PA_1360, Au Port Salut, 48.8459786,2.340900
 PA_1361, 3 allée Verte,48.8594620000, 2.3705370000
 PA_1362, 2 rue des Boulets,48.854238,2.388704
 PA_1363, 70 quai de la Loire,48.8866050000, 2.3774630000
@@ -1406,4 +1449,3 @@ VRS_019, D91. Versailles , 48.797859, 2.123200
 VRS_020, Route de Saint-Cyr. Versailles , 48.800831, 2.120048
 VRS_021, Rue de limoges. Versailles , 48.800279, 2.132092
 VRS_022, 9 rue Sainte-Anne. Versailles , 48.805450, 2.125727
-ZZ_001,2 Rue Tiquetonne. 75002 Paris,48.86428,2.34995

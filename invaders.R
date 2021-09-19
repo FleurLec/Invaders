@@ -16,7 +16,7 @@ library(knitr)
 library(rmarkdown)
 
 #### Code of invaders that are inside buildings / not accessible easily
-code.inside <- c("PA_0603", "PA_1431", "PA_0773", "PA_0799")
+code.inside <- c("PA_0603", "PA_1431", "PA_0773", "PA_0799", "PA_1264", "PA_0538", "PA_0537", "PA_0261", "PA_0284", "PA_0292", "PA_1265")
 
 
 options(stringsAsFactors=FALSE)
@@ -47,7 +47,7 @@ table(invader.all$artist)
 
 # tag status (not perfect, but as invaders are from many city PA, NY, LY..., easier that way)
 invader.all <- invader.all %>% 
-  mutate( status = ifelse(artist == "XX", "Not.invader", "Not.yet")) 
+  mutate( status = ifelse(artist == "ZZ", "Not.invader", "Not.yet")) 
 
 invader.all <- invader.all %>% mutate(status = ifelse((status == "Not.yet" & code %in% code.inside), "Not.yet.inside", "Not.yet"))
 
