@@ -42,6 +42,9 @@ lat.med <- as.numeric(quantile(invader.final$lat, .5))
 lon.force <- 2.292712927
 lat.force <- 48.85067368
 
+lon.LDN <- -0.134247
+lat.LDN <- 51.514285
+
 #lat.med <-  48.867114 
 #lon.med <- 2.358201
 ## DRAW LOCATION ON A MAP
@@ -49,6 +52,7 @@ lat.force <- 48.85067368
 leaflet(data = invader.final, width = "100%") %>%
   addTiles() %>%
   setView(lng = lon.med, lat = lat.med, zoom = 13) %>%
+  #setView(lng = lon.LDN, lat = lat.LDN, zoom = 13) %>% # LONDOND
   #setView(lng = lon.force, lat = lat.force, zoom = 15) %>%
   addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, invaders.geo))) %>%
   addFullscreenControl()

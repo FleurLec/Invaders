@@ -6,3 +6,4 @@
 *.docx
 OSMtoken
 *.DS_Store
+/data

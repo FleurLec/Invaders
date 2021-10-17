@@ -1,4 +1,120 @@
 code,invaders.geo,lat,lon
+LDN_001,355 Ladbroke Grove North Kensington W10 5NQ,51.52438,-0.214142
+LDN_003, 12 Colville Square edge with Colville Gardens, 51.5161054,-0.2052886
+LDN_004,1 Pembridge Square Notting Hill W2 4EW,51.511356,-0.197494
+LDN_005,55 Frith Street NA W1D 4SJ,51.513991,-0.13175
+LDN_006,69-71 Dean Street NA W1D 3SE,51.51337,-0.13278
+LDN_007,NA Carlisle Street NA N1,51.515083,-0.132893
+LDN_008,16-18 Shelton Street Covent Garden WC2H 9JL,51.513748,-0.125275
+LDN_009,107-115 Long Acre Covent Garden WC2E 9NT,51.513365,-0.124288
+LDN_010,55 Regent Street NA W1B 5AS,51.509964,-0.135197
+LDN_011,8 Stafford Street NA W1S 4TF,51.508519,-0.141819
+LDN_012,1 Grafton Street Mayfair W1S 4DZ,51.50932,-0.143285
+LDN_013,6 Burlington Gardens NA W1S 3ET,51.510035,-0.139899
+LDN_014,NA Coventry Street NA W1J 9HS,51.510121,-0.134081
+LDN_015,21 Piccadilly NA W1J 0BH,51.509621,-0.136028
+LDN_016,9 Pall Mall NA SW1Y 5NP,51.507153,-0.132877
+LDN_019, 10 Barrett Street, 51.5150286,-0.1533807
+LDN_020,11-14 Hinde Street Marylebone W1U 2AY,51.517009,-0.151427
+LDN_022, 25 coronet Street, 51.5273429,-0.082727
+LDN_024,91 Brick Lane NA N1,51.521603,-0.071883
+LDN_025,146 Brick Lane NA E1 6RU,51.521121,-0.071787
+LDN_027,17 Rainham Road London Borough of Brent NW10 5DS,51.5298,-0.220309
+LDN_029,197-213 Oxford Street Fitzrovia W1,51.515451,-0.13931
+LDN_030,NA Carnaby Street NA N1,51.512752,-0.138386
+LDN_031,13 Newburgh Street NA N1,51.513573,-0.138853
+LDN_032,41-49 Broadwick Street NA W1F 9QL,51.51324,-0.137179
+LDN_033,77 Wardour Street NA W1D 6QA,51.512382,-0.133027
+LDN_034,1 Earlham Street London Borough of Camden WC2H 9LL,51.513583,-0.12851
+LDN_035,NA James Street Covent Garden WC2,51.512912,-0.124074
+LDN_037,NA Neal's Yard London Borough of Camden N1,51.514471,-0.126531
+LDN_038,42 Shelton Street Covent Garden WC2H 9HZ,51.514111,-0.124515
+LDN_039,17-19 Neal Street Covent Garden WC2H 9PU,51.513757,-0.124846
+LDN_041,NA Long Acre Covent Garden N1,51.512034,-0.126273
+LDN_042, 31 Atlantic Road, 51.462571,-0.113334
+LDN_043,802 Harrow Road North Kensington NW10 5JX,51.52877,-0.219104
+LDN_044,NA Great Newport Street Covent Garden WC2H 7JE,51.51189,-0.128132
+LDN_045,NA Grand Union Canal (Paddington Branch) towpath North Kensington W10 5AY,51.52663,-0.21532
+LDN_046, 57 Golborne Rd London W10 5NR, 51.522417,-0.2077221
+LDN_048,NA Elgin Crescent Notting Hill W11 2JA,51.5149,-0.20528
+LDN_049,NA Palace Avenue South Kensington W8 4RE,51.502425,-0.187492
+LDN_051,116-118 St. John Street London Borough of Islington EC1V 4JS,51.52265,-0.102026
+LDN_052,61A Ledbury Road Notting Hill W11,51.514259,-0.199239
+LDN_054,NA Gower Street St Pancras WC1E 6EA,51.522243,-0.132295
+LDN_055,122 Wardour Street NA N1,51.514285,-0.134247
+LDN_056,NA Ely's Yard NA N1,51.521014,-0.073085
+LDN_057,107 Brick Lane NA E1 6SE,51.522496,-0.071722
+LDN_058,NA Westminster Bridge NA SW1A 2JH,51.500649,-0.120013
+LDN_059,NA The Queen's Walk Lambeth SE1 7PB,51.502373,-0.119801
+LDN_061,254-256 Tottenham Court Road London Borough of Camden W1T 7RB,51.517523,-0.131141
+LDN_062,NA Flitcroft Street London Borough of Camden N1,51.514829,-0.129111
+LDN_063,NA St Giles Square London Borough of Camden N1,51.515792,-0.129848
+LDN_064,7 Greek Street NA N1,51.514542,-0.131175
+LDN_065,NA Black Prince Road Vauxhall SE1 7SJ,51.491959,-0.119736
+LDN_066,NA Leake Street Lambeth SE1,51.501973,-0.115786
+LDN_067,6 Greek Street NA W1D 4DE,51.514655,-0.13109
+LDN_068,NA West Poultry Avenue NA EC1A 9LY,51.518466,-0.105176
+LDN_069,1 St. John Street London Borough of Islington EC1M 4AA,51.519944,-0.10205
+LDN_070,10 Carthusian Street NA EC1M 6EB,51.520595,-0.098571
+LDN_071,4 Carlisle Street NA W1D 3BJ,51.514839,-0.133475
+LDN_072,6 Charing Cross Road Covent Garden WC2H 0HF,51.510158,-0.128118
+LDN_073,1 Hanway Place Fitzrovia W1T 1UL,51.516693,-0.132531
+LDN_074,17-25 New Inn Yard Shoreditch EC2A 3EA,51.524474,-0.078856
+LDN_075,11 Leonard Street Finsbury EC2A 4AQ,51.524601,-0.086837
+LDN_076,58-60 Rivington Street Shoreditch N1,51.526034,-0.08026
+LDN_077,NA Great Eastern Street Shoreditch N1,51.526269,-0.083614
+LDN_078,NA Mills Court Shoreditch N1,51.525794,-0.080458
+LDN_079,NA Clerkenwell Road London Borough of Islington N1,51.522112,-0.106835
+LDN_080,NA Clerkenwell Green London Borough of Islington N1,51.522383,-0.10613
+LDN_081,4 Lindsey Street London Borough of Islington EC1A 9HP,51.52005,-0.100159
+LDN_082,NA Bear Gardens London Borough of Southwark SE1 9ED,51.507237,-0.096098
+LDN_083,NA Stoney Street Borough SE1 9AA,51.505231,-0.092043
+LDN_084,77 - 81 The Cut London Borough of Lambeth SE1 8LL,51.502552,-0.108552
+LDN_085,NA Southwark Street Southwark SE1 9UF,51.506994,-0.10385
+LDN_086,384 Old Street Shoreditch EC1V 9LT,51.52714,-0.078886
+LDN_087,121 City Road Finsbury EC1V 1JB,51.525997,-0.086981
+LDN_088,366 Gray's Inn Road King's Cross WC1X 8BE,51.530278,-0.120643
+LDN_089,NA Southampton Row Holborn N1,51.517967,-0.120466
+LDN_090,NA Oxford Street Fitzrovia N1,51.516338,-0.130763
+LDN_091,15 Poland Street NA W1D 2JL,51.514784,-0.137066
+LDN_092,19-20 Noel Street NA N1,51.514944,-0.136449
+LDN_093,NA Bank End Borough SE1 9BU,51.507381,-0.092719
+LDN_094,NA Stoney Street Borough SE1 9AA,51.505847,-0.088955
+LDN_095,76-78 Notting Hill Gate Notting Hill W11 3HP,51.509109,-0.196745
+LDN_096,151 Wardour Street NA W1F 0TD,51.514424,-0.134823
+LDN_097,81 Rivington Street Shoreditch EC2A 3AY,51.526288,-0.079061
+LDN_098,NA Bishopsgate NA EC3,51.514161,-0.083803
+LDN_099,133 Middlesex Street NA E1 7JJ,51.5181,-0.079587
+LDN_100,75-77 Broadway Market Haggerston E8 4PH,51.537641,-0.061134
+LDN_101,NA Fleur De Lis Street NA N1,51.521772,-0.078074
+LDN_104, 158 Drury Ln WC2B 5QB, 51.5148587,-0.1224585
+LDN_106, Union walk and Waterson street, 51.5286827,-0.0773737
+LDN_110, 13 W Central St, 51.5167043,-0.1277715
+LDN_111, Drysdale Street, 51.5279794,-0.0788184
+LDN_115, 1 charlotte road, 51.5266067,-0.0835542
+LDN_116, 5 Clerkenwell Rd EC1M 5PA, 51.5232857,-0.0990648
+LDN_119, Trueman brewery Shoreditch, 51.5211007,-0.0751441
+LDN_125, Brixton on the bridge, 51.463469,-0.1154454
+LDN_126, 50 Lambeth High St SE1 7JS, 51.493054,-0.12102
+LDN_128, 641 Commercial Rd E14 7NT, 51.5129043,-0.0416309
+LDN_130, Invicta Plaza, 51.5069779,-0.1041109
+LDN_131, 177 Kennington Ln SE11 4EZ, 51.4888394,-0.1127744
+LDN_133, Sherston court, 51.4926035,-0.1015634
+LDN_135, angle Sandringham road and Kingsland High, 51.549777,-0.0757435
+LDN_136, Clost to Hackney Central, 51.5470339,-0.0550701
+LDN_137, Old Street Prick Tattos, 51.5270277,-0.0787514
+LDN_138, 19 Great Eastern Shoreditch, 51.5232154,-0.081162
+LDN_139, Buck Street Nemesis Tattoo, 51.5401955,-0.1433817
+LDN_140, inside London museum, 51.5174937,-0.0972424
+LDN_141, inside London museum, 51.5174937,-0.0972424
+LDN_142, The Arts Building Finsbury Park, 51.5661053,-0.1099551
+LDN_143, Prince Charles Cinema, 51.5115511,-0.1326329
+LDN_144, National Theatre, 51.5067649,-0.1148403
+LDN_144, The Arts Building Finsbury Park, 51.56603,-0.109869
+LDN_145, 303 Holloway Rd Londres, 51.5528304,-0.1154193
+LDN_148, 370 Lea Bridge Rd London E10 7HU, 51.570426, -0.024859
+LDN_149, 617b Forest Rd London E17 4NE, 51.5899952,-0.0165597
+LDN_150, 55 New N Rd Hoxton London N1 6JB, 51.5309323,-0.0882104
 LY_0003, place Gabriel Rambaud. Lyon, 45.767879, 4.829440
 LY_0006,49 Quai Saint-Vincent. 69001 Lyon, 45.767874, 4.828119
 LY_0007,18 Rue Lainerie. 69005 Lyon, 45.764837, 4.828098
@@ -93,9 +209,9 @@ PA_0059,1 Rue Lacordaire. 75015 Paris,48.84427,2.2846099
 PA_0060, Eglise Saint-Eustache. 75001 Paris,48.86365,2.3445
 PA_0061,2 Rue des Petits-Carreaux. 75002 Paris,48.86639,2.34726
 PA_0062,99 Rue Réaumur. 75002 Paris,48.86764,2.3455499
-PA_0063, 74 rue de Charonne,48.8534210000, 2.3798630000
-PA_0064, devant le Musée d'Art Moderne,48.8647660000, 2.2973970000
-PA_0065, 30 rue de Lappe,48.8530920000, 2.3739140000
+PA_0063,74 rue de Charonne,48.8534210000, 2.3798630000
+PA_0064,devant le Musée d'Art Moderne,48.8647660000, 2.2973970000
+PA_0065,30 rue de Lappe,48.8530920000, 2.3739140000
 PA_0066,63 Rue des Trois Fréres. 75018 Paris,48.8855999,2.33815
 PA_0067,63 Rue des Trois Fréres. 75018 Paris,48.8855999,2.33815
 PA_0068,63 Rue des Trois Fréres. 75018 Paris,48.8855999,2.33815
@@ -187,7 +303,7 @@ PA_0170, 1 rue Saint Eleuthère, 48.8861083,2.3413708
 PA_0171, balustrade Sous le sacré coeur, 48.8855151,2.3432753
 PA_0172, 21 rue Carpeaux,48.8911900000, 2.3318000000
 PA_0173, sur le trottoir 64 rue traversière, 48.8503534,2.3756789
-PA_0174 , 68 rue des Cévennes, 48.8415966,2.2824314
+PA_0174, 68 rue des Cévennes, 48.8415966,2.2824314
 PA_0175,18 Passage du Chantier. 75012 Paris,48.85151,2.37352
 PA_0176,12 Rue Cassette. 75006 Paris,48.84984,2.3307699
 PA_0177,Rue du 29 Juillet. 75001 Paris,48.86493,2.33047

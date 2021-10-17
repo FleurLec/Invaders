@@ -1,3 +1,18 @@
+---
+title: "Trips"
+output: html_document
+date: "2021"
+params: 
+  output_dir: "../output"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width=12, fig.height=8)
+
+```
+
+```{r leaflet, echo=FALSE, message=FALSE, warning=FALSE, width = 40, height = 50}
+
 ##############################
 ##       CREATE TRIPS       ##
 ##############################
@@ -16,6 +31,7 @@ library(tidyverse)
 library(leaflet)
 library(leaflet.extras)
 library(htmltools)
+library(geosphere)
 
 token <- readLines("./OSMtoken")
 ors_api_key(token)
@@ -47,9 +63,9 @@ if (SI.center == "") {start <- geocode_OSM(myAdr)
   latN <- lat.start  - bbox.km*0.01/1.112
   latS <- lat.start  + bbox.km*0.01/1.112
   
-  cat(paste("coin : lat/lon", latS, ",", lonW ))
-  cat(paste("coin : lat/lon", latN, ",", lonE ))
-  cat(paste("centre :", lat.start, ",", lon.start))  
+  # cat(paste("coin : lat/lon", latS, ",", lonW ))
+  # cat(paste("coin : lat/lon", latN, ",", lonE ))
+  # cat(paste("centre :", lat.start, ",", lon.start))  
 
   
 ## Get invaders list and select distance to the center
@@ -86,8 +102,7 @@ if (SI.center == "") {start <- geocode_OSM(myAdr)
     filter(status != "Got.it")
    
  ## DRAW MAP
-   invader.out %>% filter(code == "PA_1265")
-   
+
    invader.icon <- iconList(
      Got.it = makeIcon(iconUrl = "./img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
      Not.yet = makeIcon(iconUrl = "./img/invaders-pink-logo.png",   iconWidth = 20, iconHeight = 20),
@@ -113,4 +128,5 @@ if (SI.center == "") {start <- geocode_OSM(myAdr)
 ## need to add a travelling salesman problem implementation here :)
 ## check out https://www.r-orms.org/mixed-integer-linear-programming/practicals/problem-tsp/
   
-  
+
+```

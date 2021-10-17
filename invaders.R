@@ -1,8 +1,8 @@
 #########################################################
 # Draw a map of Invaders in Paris
 #########################################################
-# INPUT : - 4 pictos in /img/
-#         - data/invaders.geo.clean.csv
+# INPUT : - 6 pictos in /img/
+#         - data/invaders.geocoded.csv
 #         - data/flash_invaders.csv
 #         - data/desactivated.csv
 
@@ -10,16 +10,18 @@ library(leaflet)
 library(htmltools)
 library(mapview)
 library(dplyr)
+library(stringr)
 library(xml2)
 library(rvest)
 library(knitr)
 library(rmarkdown)
+options(stringsAsFactors=FALSE)
 
 #### Code of invaders that are inside buildings / not accessible easily
-code.inside <- c("PA_0603", "PA_1431", "PA_0773", "PA_0799", "PA_1264", "PA_0538", "PA_0537", "PA_0261", "PA_0284", "PA_0292", "PA_1265")
 
-
-options(stringsAsFactors=FALSE)
+PAmax <- 1467 ; LDNmax <- 150
+code.inside <- c("PA_0603", "PA_1431", "PA_0773", "PA_0799", "PA_1264", "PA_0538", "PA_0537", "PA_0261", "PA_0284", 
+                 "PA_0292", "PA_1265", "PA_0992", "PA_1079","PA_0888", "PA_1001", "LDN_140", "LDN_141")
 
 ##### BUILD INVADERS LOGO ###########################################################
 
@@ -42,7 +44,8 @@ invader.icon <- iconList(
 # read cleaned file
 invader.all <- read.csv( file = "./data/invaders.geocoded.csv", stringsAsFactors = F)
 
-invader.all <- invader.all %>% mutate(artist = substr(code, 1, 2))
+invader.all <- invader.all %>% mutate(code = str_trim(code), 
+                                      artist = substr(code, 1, 2))
 table(invader.all$artist)
 
 # tag status (not perfect, but as invaders are from many city PA, NY, LY..., easier that way)
@@ -55,6 +58,7 @@ invader.all <- invader.all %>% mutate(status = ifelse((status == "Not.yet" & cod
 # read alreadly flashed invaders
 invader.flash <- read.csv( file = "./data/flash_invaders.csv", stringsAsFactors = F)
 invader.flash$status2="Got.it"
+
 
 # merge already flashed and to be flashed
 invader.all2 <- invader.all %>% 
@@ -127,10 +131,18 @@ kable(count.invaders)
 ## check which invaders are missing from geoclean
 head(invader.final)
 
-all <- data.frame(code = (1:1467)) 
-all$code <- paste0("PA_", sprintf("%04d",all$code))
-missing <- all %>% anti_join(invader.final, by = "code")
-missing$code <- stringr::str_trim(missing$code)
-write.csv(missing , file = "./data/OUT_invader.to.add.csv", row.names=F, quote = F)
+# PARIS
+PA_all <- data.frame(code = (1:PAmax)) 
+PA_all$code <- paste0("PA_", sprintf("%04d",PA_all$code))
+PA_missing <- PA_all %>% anti_join(invader.final, by = "code")
+PA_missing$code <- stringr::str_trim(PA_missing$code)
 
+# LONDRES
+LDN_all <- data.frame(code = (1:LDNmax)) 
+LDN_all$code <- paste0("LDN_", sprintf("%03d",LDN_all$code))
+LDN_missing <- LDN_all %>% anti_join(invader.final, by = "code")
+LDN_missing$code <- stringr::str_trim(LDN_missing$code)
+
+missing <- rbind(PA_missing, LDN_missing)
+write.csv(missing , file = "./data/OUT_invader.to.add.csv", row.names=F, quote = F)
 
