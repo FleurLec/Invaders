@@ -1,0 +1,132 @@
+---
+title: "Trips"
+output: html_document
+date: "2021"
+params: 
+  output_dir: "../output"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width=12, fig.height=8)
+
+```
+
+```{r leaflet, echo=FALSE, message=FALSE, warning=FALSE, width = 40, height = 50}
+
+##############################
+##       CREATE TRIPS       ##
+##############################
+
+## Enter a list of POI (with GPX coordinates)
+## Specify a starting and end point
+## specify a number of kilometers
+## Out : a trip
+
+# devtools::install_github("GIScience/openrouteservice-r")
+# install.packages("sfheaders")
+
+library(tmaptools)
+library(openrouteservice)
+library(tidyverse)
+library(leaflet)
+library(leaflet.extras)
+library(htmltools)
+library(geosphere)
+
+token <- readLines("./OSMtoken")
+ors_api_key(token)
+load(file="./data/OUT_invader_final.Rdata")
+
+
+#### >> CHOOSE YOUR ADDRESS IN  <<
+  SI.center <- "PA_0032"
+  myAdr <- "108 rue vieille du temple, Paris"
+  bbox.km <- 2
+  nbmax.invader <- 40
+#### >>>>>> <<<<<<
+  
+if (SI.center == "") {start <- geocode_OSM(myAdr)
+                      lon.start <- start$coords["x"]
+                      lat.start <- start$coords["y"]
+} else { start <- invader.final %>% filter(code == SI.center) %>% select(lat, lon)
+                      lon.start <- start$lon
+                      lat.start <- start$lat
+                      }
+  
+## 1) Select invaders in a box framing it
+## 0.01 pt de longitude (2.38) = 0,734km -> 1km = 0.01/0.734
+## 0.01 pt de latitude (48.85) = 1,112km -> 1km = 0.01/1.112
+
+  
+  lonW <- lon.start - bbox.km*0.01/0.734
+  lonE <- lon.start  + bbox.km*0.01/0.734
+  latN <- lat.start  - bbox.km*0.01/1.112
+  latS <- lat.start  + bbox.km*0.01/1.112
+  
+  # cat(paste("coin : lat/lon", latS, ",", lonW ))
+  # cat(paste("coin : lat/lon", latN, ",", lonE ))
+  # cat(paste("centre :", lat.start, ",", lon.start))  
+
+  
+## Get invaders list and select distance to the center
+
+  invader.select <- invader.final %>% filter(latN < lat & lat < latS & lonW < lon & lon < lonE &
+                                             status == "Not.yet") %>%
+                                      mutate(status = "Want.it")
+  
+  invader.select <- invader.select %>% mutate(dist = sqrt( (lon.start - lon)^2 + (lat.start - lat)^2 )) %>% # distance entre invaders & centre
+                                       arrange(dist) %>% 
+                                       slice(1:nbmax.invader) 
+
+  
+## Draw map of invaders
+ 
+  # clean format for lat/long
+  options(digits=9)
+  invader.select$lon <- as.numeric(invader.select$lon)
+  invader.select$lat <- as.numeric(invader.select$lat)
+  
+  lon.med <- as.numeric(quantile(invader.select$lon, .5))
+  lat.med <- as.numeric(quantile(invader.select$lat, .5))
+  
+  ## Add routes
+  x <- invader.select %>% select(lon, lat) %>% ors_directions(ors_profile(mode = "walking"))
+  
+  
+ ## Drawing all invaders too check target vs all
+  invader.select <- invader.select %>% select(code, status)
+ 
+   invader.out <- invader.final %>% left_join(invader.select, by=c("code" = "code"), suffix = c("", "_new")) %>%
+    mutate(status = ifelse(is.na(status_new), status, status_new)) %>%
+    select(-status_new) %>%
+    filter(status != "Got.it")
+   
+ ## DRAW MAP
+
+   invader.icon <- iconList(
+     Got.it = makeIcon(iconUrl = "./img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
+     Not.yet = makeIcon(iconUrl = "./img/invaders-pink-logo.png",   iconWidth = 20, iconHeight = 20),
+     Not.yet.inside = makeIcon(iconUrl = "./img/invaders-yellow-logo.png",   iconWidth = 20, iconHeight = 20),
+     Want.it = makeIcon(iconUrl = "./img/invaders-lagoon-logo.png",   iconWidth = 20, iconHeight = 20),
+     Not.invader = makeIcon(iconUrl = "./img/not-invader.png",   iconWidth = 20, iconHeight = 20),
+     Desactivated = makeIcon(iconUrl = "./img/desactivated.png",   iconWidth = 20, iconHeight = 20)
+   )
+   
+   start.icon = makeIcon(iconUrl = "./img/start.png",   iconWidth = 20, iconHeight = 20)
+   
+ 
+  leaflet(data = invader.out, width = "100%") %>%
+    addTiles() %>%
+    setView(lng = lon.med, lat = lat.med, zoom = 13) %>%
+    addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, invaders.geo))) %>%
+    addMarkers(lon.start, lat.start, icon = start.icon) %>%
+    addFullscreenControl()  %>%
+    #addGeoJSON(x, fill=FALSE) %>%
+    fitBBox(x$bbox)
+  
+
+## need to add a travelling salesman problem implementation here :)
+## check out https://www.r-orms.org/mixed-integer-linear-programming/practicals/problem-tsp/
+  
+
+```

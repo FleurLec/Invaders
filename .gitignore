@@ -3,8 +3,13 @@
 .RData
 .Ruserdata
 /pic
-*.docx
+/pic2
+/data
+/html
+/png
 OSMtoken
 *.DS_Store
-/data
+*.docx
 *.html
+*.pdf
+*.gpx

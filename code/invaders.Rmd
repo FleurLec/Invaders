@@ -1,17 +1,14 @@
 ---
-title: "Invaders map"
+title: "Invaders FlecMap"
 output: html_document
-date: "2021"
+date: "2022"
 params: 
-  output_dir: "../output"
+  output_dir: "./output"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.width=12, fig.height=8)
 
-```
-
-```{r leaflet, echo=FALSE, message=FALSE, warning=FALSE, width = 40, height = 50}
 library(leaflet)
 library(htmltools)
 library(dplyr)
@@ -19,15 +16,20 @@ library(xml2)
 library(rvest)
 library(knitr)
 library(leaflet.extras)
+```
 
-load("../data/OUT_invader_final.Rdata")
+```{r leaflet, echo=FALSE, message=FALSE, warning=FALSE, width = 40, height = 50}
+
+setwd("/Users/FleurLec/Documents/Codes/02-geo/Invaders/")
+#load("./data/OUT_invader_final.Rdata")
+source(file = "./code/invaders.R")
 
 invader.icon <- iconList(
-  Got.it = makeIcon(iconUrl = "../img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
-  Not.yet = makeIcon(iconUrl = "../img/invaders-pink-logo.png",   iconWidth = 20, iconHeight = 20),
-  Not.yet.inside = makeIcon(iconUrl = "../img/invaders-yellow-logo.png",   iconWidth = 20, iconHeight = 20),
-  Not.invader = makeIcon(iconUrl = "../img/not-invader.png",   iconWidth = 20, iconHeight = 20),
-  Desactivated = makeIcon(iconUrl = "../img/desactivated.png",   iconWidth = 20, iconHeight = 20)
+  Got.it = makeIcon(iconUrl = "./img/invaders-green-logo.png",   iconWidth = 20, iconHeight = 20),
+  Not.yet = makeIcon(iconUrl = "./img/invaders-pink-logo.png",   iconWidth = 20, iconHeight = 20),
+  Not.yet.inside = makeIcon(iconUrl = "./img/invaders-yellow-logo.png",   iconWidth = 20, iconHeight = 20),
+  Not.invader = makeIcon(iconUrl = "./img/not-invader.png",   iconWidth = 20, iconHeight = 20),
+  Desactivated = makeIcon(iconUrl = "./img/desactivated.png",   iconWidth = 20, iconHeight = 20)
 )
 
 
@@ -36,24 +38,34 @@ options(digits=9)
 invader.final$lon <- as.numeric(invader.final$lon)
 invader.final$lat <- as.numeric(invader.final$lat)
 
-lon.med <- as.numeric(quantile(invader.final$lon, .5))
-lat.med <- as.numeric(quantile(invader.final$lat, .5))
+lon.med <- as.numeric(quantile(invader.final$lon, .5, na.rm = T))
+lat.med <- as.numeric(quantile(invader.final$lat, .5, na.rm = T))
 
-lon.force <- 2.292712927
-lat.force <- 48.85067368
+code_force = "PA_0961"
+lon.force <- invader.final[invader.final$code == code_force,]$lon
+lat.force <- invader.final[invader.final$code == code_force,]$lat
 
-lon.LDN <- -0.134247
-lat.LDN <- 51.514285
+#lon.LDN <- -0.134247
+#lat.LDN <- 51.514285
 
-#lat.med <-  48.867114 
-#lon.med <- 2.358201
+
 ## DRAW LOCATION ON A MAP
+
 
 leaflet(data = invader.final, width = "100%") %>%
   addTiles() %>%
   setView(lng = lon.med, lat = lat.med, zoom = 13) %>%
   #setView(lng = lon.LDN, lat = lat.LDN, zoom = 13) %>% # LONDOND
   #setView(lng = lon.force, lat = lat.force, zoom = 15) %>%
-  addMarkers( ~lon, ~lat, icon = ~invader.icon[status], popup = ~htmlEscape(paste(code, invaders.geo))) %>%
+  addMarkers( ~lon, ~lat, icon = ~invader.icon[status]
+              , popup = ~htmlEscape(paste(code, invaders.geo))
+             , group = 'Invaders_popups'
+             ) %>%
+  # leafpop::addPopupImages(image = invader.final$pic
+  #                       , group = 'Invaders_popups'
+  #                       , tooltip = 1) %>%
   addFullscreenControl()
+
+
+
 ```
